@@ -5,6 +5,12 @@ public class Item
     private String itemName;
     private ItemType itemType;
 
+    public Item (String name, ItemType type)
+    {
+        setItemName(name);
+        setItemType(type);
+    }
+
     public String getItemName()
     {
         return itemName;
