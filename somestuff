@@ -4,14 +4,14 @@ Name:
 World Type: Fantasy
 --------------------------------------
 Heroes
-  Name:
+  *Name:
   Race:
   HeroClass:
-  CurrentLvL:
+  *CurrentLvL:
   MaxLvl = 10
   CurrentExperience:
   MaxHealth = lvl*coeficient + items + stats
-  CurrentHealth:
+  *CurrentHealth:
   Power: lvl*coeficient + items + stats
   
   
@@ -38,12 +38,12 @@ Heroes
     
 --------------------------------   
 Non-Player-Creatures
-  Name:
-  Health:
+  *Name:
+  *Health:
   Powerful: Normal || Elite || Boss
   Type: Beast || Humanoid || Undead
   Power:
-  LvL:
+  *LvL:
   
   Loot:
   givesExperience:
@@ -66,6 +66,7 @@ class PowerType:
 Items:
   Name:
   Type:
+  requiredLvl;
   Class Weapon:
     stats
     damageLow:
