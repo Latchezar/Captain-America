@@ -1,8 +1,8 @@
 package Creatures;
 
 public class Creature {
-    String name;
-    int currentLvl;
-    int currenHealth;
+    private String name;
+    private int currentLvl;
+    private int currenHealth;
 
 }
