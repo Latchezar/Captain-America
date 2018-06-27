@@ -1,7 +1,7 @@
 package Powers;
 
 public enum PowerType {
-    MAGIC,NATURE,SPIRT,PHYSIC,TECH
+    MAGICAL,NATURAL,SPIRTUAL,TECHOLOGYCAL
 
 
 }
