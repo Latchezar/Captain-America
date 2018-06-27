@@ -1,0 +1,80 @@
+Game:
+Name:
+
+World Type: Fantasy
+--------------------------------------
+Heroes
+  Name:
+  Race:
+  HeroClass:
+  CurrentLvL:
+  MaxLvl = 10
+  CurrentExperience:
+  MaxHealth = lvl*coeficient + items + stats
+  CurrentHealth:
+  Power: lvl*coeficient + items + stats
+  
+  
+  Hero Stats:
+    Damage: 
+    Stamina: for health
+    Strength: for power
+    Intellect: for power
+    Agility: for power
+    Deffence:
+    Resistance from PowerType
+    
+  Items:
+    Weapon: 
+    Armor:
+    
+  Skills:
+    Depending on class
+    Racial Skill
+    
+    Attack()
+      damage = power + stats
+    
+    
+--------------------------------   
+Non-Player-Creatures
+  Name:
+  Health:
+  Powerful: Normal || Elite || Boss
+  Type: Beast || Humanoid || Undead
+  Power:
+  LvL:
+  
+  Loot:
+  givesExperience:
+  
+------------------------
+abstract Power:
+Name:
+PowerType:
+BaseDamage:
+  -----
+  npcPower:
+  
+  
+  -----
+  heroPower:
+  
+  ----
+class PowerType:
+------------------------------
+Items:
+  Name:
+  Type:
+  Class Weapon:
+    stats
+    damageLow:
+    damageHigh:
+  
+    
+  Class Armor:
+    deffence++;
+    stats;
+    resist;
+-------------------
+  
