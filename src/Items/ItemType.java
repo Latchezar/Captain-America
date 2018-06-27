@@ -1,6 +1,6 @@
 package Items;
 
-public enum ItemType
+public class ItemType
 {
-    WEAPON, ARMOUR
+    private int requiredLevel;
 }
