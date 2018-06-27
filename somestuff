@@ -5,8 +5,8 @@ World Type: Fantasy
 --------------------------------------
 Heroes
   *Name:
-  Race:
-  HeroClass:
+  *Race:
+  *HeroClass:
   *CurrentLvL:
   MaxLvl = 10
   CurrentExperience:
