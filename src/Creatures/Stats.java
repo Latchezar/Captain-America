@@ -8,6 +8,8 @@ public class Stats {
     private int agility = 0;
     private int deffence = 0;
 
+
+
     public int getDeffence() {
         return deffence;
     }
