@@ -5,17 +5,33 @@ public abstract class Power {
     private  PowerType powertype;
     private  int baseDamage;
 
+    public Power(String name,PowerType powerType,int baseDamage){
 
-    protected Power(String name, PowerType powertype, int baseDamage) {
-        this.name = name;
-        this.powertype = powertype;
-        this.baseDamage = baseDamage;
     }
 
-    
 
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public PowerType getPowertype() {
+        return powertype;
+    }
 
+    public void setPowertype(PowerType powertype) {
+        this.powertype = powertype;
+    }
+
+    public int getBaseDamage() {
+        return baseDamage;
+    }
+
+    public void setBaseDamage(int baseDamage) {
+        this.baseDamage = baseDamage;
+    }
 }
