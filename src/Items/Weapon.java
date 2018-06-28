@@ -1,13 +1,16 @@
 package Items;
 
+import Creatures.HeroClass;
+import Creatures.Stats;
+
 public class Weapon extends ItemType
 {
     private int minDamage;
     private int maxDamage;
 
-    public Weapon(int requiredLevel, int minDamage, int maxDamage)
+    public Weapon(int requiredLevel, HeroClass requiredClass, Stats stats, int minDamage, int maxDamage)
     {
-        super(requiredLevel);
+        super(requiredLevel, requiredClass, stats);
         setMinDamage(minDamage);
         setMaxDamage(maxDamage);
     }
@@ -22,12 +25,12 @@ public class Weapon extends ItemType
         return maxDamage;
     }
 
-    public void setMinDamage(int minDamage)
+    private void setMinDamage(int minDamage)
     {
         this.minDamage = minDamage;
     }
 
-    public void setMaxDamage(int maxDamage)
+    private void setMaxDamage(int maxDamage)
     {
         this.maxDamage = maxDamage;
     }

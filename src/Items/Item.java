@@ -16,7 +16,7 @@ public class Item
         return itemName;
     }
 
-    public void setItemName(String itemName)
+    private void setItemName(String itemName)
     {
         this.itemName = itemName;
     }
@@ -26,7 +26,7 @@ public class Item
         return itemType;
     }
 
-    public void setItemType(ItemType itemType)
+    private void setItemType(ItemType itemType)
     {
         this.itemType = itemType;
     }
