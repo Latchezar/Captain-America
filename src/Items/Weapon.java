@@ -1,37 +1,14 @@
 package Items;
 
 import Creatures.HeroClass;
-import Creatures.Stats;
 
-public class Weapon extends ItemType
+public class Weapon extends Item
 {
-    private int minDamage;
-    private int maxDamage;
+    private WeaponType weaponType;
+    private WeaponStats weaponStats;
 
-    public Weapon(int requiredLevel, HeroClass requiredClass, Stats stats, int minDamage, int maxDamage)
+    public Weapon(String name, int requiredLevel, HeroClass heroClass)
     {
-        super(requiredLevel, requiredClass, stats);
-        setMinDamage(minDamage);
-        setMaxDamage(maxDamage);
-    }
-
-    public int getMinDamage()
-    {
-        return minDamage;
-    }
-
-    public int getMaxDamage()
-    {
-        return maxDamage;
-    }
-
-    private void setMinDamage(int minDamage)
-    {
-        this.minDamage = minDamage;
-    }
-
-    private void setMaxDamage(int maxDamage)
-    {
-        this.maxDamage = maxDamage;
+        super(name, requiredLevel, heroClass);
     }
 }

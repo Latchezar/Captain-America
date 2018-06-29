@@ -1,14 +1,18 @@
 package Items;
 
-public class Item
+import Creatures.HeroClass;
+
+public abstract class Item
 {
     private String itemName;
-    private ItemType itemType;
+    private int requiredLevel;
+    HeroClass heroClass;
 
-    public Item (String name, ItemType type)
+    public Item (String name, int requiredLevel, HeroClass heroClass)
     {
         setItemName(name);
-        setItemType(type);
+        setRequiredLevel(requiredLevel);
+        this.heroClass = heroClass;
     }
 
     public String getItemName()
@@ -21,13 +25,13 @@ public class Item
         this.itemName = itemName;
     }
 
-    public ItemType getItemType()
+    public int getRequiredLevel()
     {
-        return itemType;
+        return requiredLevel;
     }
 
-    private void setItemType(ItemType itemType)
+    public void setRequiredLevel(int requiredLevel)
     {
-        this.itemType = itemType;
+        this.requiredLevel = requiredLevel;
     }
 }
