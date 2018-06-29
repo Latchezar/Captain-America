@@ -71,21 +71,25 @@ public class Paladin extends Hero implements HeroAbilities{
     void addPower() {
         if (this.getCurrentLvl() == 3) {
             Power powerforlvl3 = new Power();
-            addMorePower(powerforlvl3);
+            addHeroPower(powerforlvl3);
             return;
         }
         if (this.getCurrentLvl() == 5) {
-            addMorePower(powerforlvl5);
+            Power powerforlvl5;
+            addHeroPower(powerforlvl5);
             return;
         }
         if (this.getCurrentLvl() == 7) {
-            addMorePower(powerforlvl7);
+            Power powerforlvl7;
+            addHeroPower(powerforlvl7);
             return;
         }
         if (this.getCurrentLvl() == 10) {
-            addMorePower(powerforlvl10);
+            Power powerforlvl10;
+            addHeroPower(powerforlvl10);
             return;
         }
+    }
     }
 
 }

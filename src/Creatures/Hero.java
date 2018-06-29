@@ -24,7 +24,7 @@ public abstract class Hero extends Creature {
         return currentXP;
     }
 
-    void addMorePower(Power power){
+    void addHeroPower(Power power){
         currentPowers.add(power);
     }
 
