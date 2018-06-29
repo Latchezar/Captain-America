@@ -13,4 +13,20 @@ public class HeroPower extends Power {
         this.requiredLvl = requiredLvl;
         this.heroClass = heroClass;
     }
+
+    public HeroClass getHeroClass() {
+        return heroClass;
+    }
+
+    public void setHeroClass(HeroClass heroClass) {
+        this.heroClass = heroClass;
+    }
+
+    public int getRequiredLvl() {
+        return requiredLvl;
+    }
+
+    public void setRequiredLvl(int requiredLvl) {
+        this.requiredLvl = requiredLvl;
+    }
 }
