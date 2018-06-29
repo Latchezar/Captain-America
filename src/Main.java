@@ -1,9 +1,9 @@
+import UiFeatures.Game;
+
 public class Main {
 
     public static void main(String[] args) {
-        int num = 1;
-        for (int i = 0; i < num; i++) {
-            System.out.println(i);
-        }
+        Game game = new Game("New Game", 1200, 800);
+        game.start();
     }
 }
