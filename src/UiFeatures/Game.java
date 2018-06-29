@@ -1,5 +1,8 @@
 package UiFeatures;
 
+import java.awt.*;
+import java.awt.image.BufferStrategy;
+
 public class Game implements Runnable{
 
     private Display display;
@@ -8,6 +11,9 @@ public class Game implements Runnable{
 
     private boolean isRunning = false;
     private Thread thread;
+
+    private BufferStrategy bs;
+    private Graphics g;
 
     public Game(String title, int width, int height){
         this.width = width;
@@ -26,7 +32,22 @@ public class Game implements Runnable{
     }
 
     private void render(){
+        bs = display.getDisplayCanvas().getBufferStrategy();
+        if(bs == null) {
+            display.getDisplayCanvas().createBufferStrategy(3);
+            return;
+        }
+        g = bs.getDrawGraphics();
+        //clear the screen
+        g.clearRect(0, 0, width, height);
+        // draw here
 
+
+
+
+        //draw end
+        bs.show();
+        g.dispose();
     }
 
     public void run(){
