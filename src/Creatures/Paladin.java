@@ -2,31 +2,33 @@ package Creatures;
 
 import Powers.Power;
 
-public class Paladin extends Hero implements HeroAbilities{
+public class Paladin extends Hero implements HeroAbilities {
 
     private Stats heroStats;
     private int maxHealth;
 
 
-    Paladin(String name, Race race){
+    Paladin(String name, Race race) {
         super(name, race);
         setHeroStats(race, 2, 2, 2); //those are magical numbers :D
-        setMaxHealth(this.heroStats.getStamina()*10+1*10);
+        setMaxHealth(this.heroStats.getStamina() * 10 + 1 * 10);
         this.setCurrenHealth(maxHealth);
     }
 
     public int getMaxHealth() {
         return maxHealth;
     }
-    public void useAbility(){
+
+    public void useAbility() {
         //to use some power
     }
 
-    private int deffHealth(){
-        int health = 1*10 + (this.getHeroStats().getStamina() * 10);
+    private int deffHealth() {
+        int health = 1 * 10 + (this.getHeroStats().getStamina() * 10);
 
         return 1;
     }
+
     private Stats setHeroStats(Race race, int stamina, int power, int deffence) {
         switch (race) {
             case HUMAN:
@@ -52,9 +54,9 @@ public class Paladin extends Hero implements HeroAbilities{
                 deffence += 1;
                 break;
             case DWARF:
-                stamina+=2;
-                power+=1;
-                deffence+=1;
+                stamina += 2;
+                power += 1;
+                deffence += 1;
                 break;
         }
         return new Stats(stamina, power, deffence);
@@ -90,6 +92,4 @@ public class Paladin extends Hero implements HeroAbilities{
             return;
         }
     }
-    }
-
 }
