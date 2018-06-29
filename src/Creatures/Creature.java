@@ -4,6 +4,8 @@ public class Creature {
     private String name;
     private int currentLvl;
     private int currenHealth;
+    private int maxHealth;
+
 
     public Creature(String name, int currentLvL, int currenHealth) {
         setName(name);
@@ -34,5 +36,13 @@ public class Creature {
 
     private void setCurrenHealth(int currenHealth) {
         this.currenHealth = currenHealth;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    private void setMaxHealth(int maxHealth) {
+        this.maxHealth = maxHealth;
     }
 }
