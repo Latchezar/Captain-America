@@ -1,41 +1,42 @@
 package Creatures;
 
-public class Hero extends Creature {
+import Powers.Power;
+
+import java.util.ArrayList;
+
+public abstract class Hero extends Creature {
     private final int MAX_LVL = 10;
     private Race race;
-    private HeroClass heroClass;
-    private Stats heroStats;
+    private int currentXP = 1;
+    ArrayList<Power> currentPowers;
 
-    public Hero(String name, int currentLvL, int currenHealth) {
-        super(name, 1, defineHealth());
+    {
+        currentPowers = new ArrayList<>();
     }
 
-    private int defineHealth() {
-        int current = (this.getCurrentLvl() * 40) + this.heroStats.getStamina() *10;
-        return current;
+    public Hero(String name, Race race) {
+        super(name, 1);
+        setRace(race);
+    }
+
+
+    public int getCurrentXP() {
+        return currentXP;
+    }
+
+    void addMorePower(Power power){
+        currentPowers.add(power);
     }
 
     public Race getRace() {
         return race;
     }
 
-    private void setRace(Race race) {
+    public int getMAX_LVL() {
+        return MAX_LVL;
+    }
+
+    public void setRace(Race race) {
         this.race = race;
-    }
-
-    public HeroClass getHeroClass() {
-        return heroClass;
-    }
-
-    private void setHeroClass(HeroClass heroClass) {
-        this.heroClass = heroClass;
-    }
-
-    public Stats getHeroStats() {
-        return heroStats;
-    }
-
-    public void setHeroStats(Stats heroStats) {
-        this.heroStats = heroStats;
     }
 }

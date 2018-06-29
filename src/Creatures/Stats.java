@@ -5,6 +5,12 @@ public class Stats {
     private int power = 0;
     private int deffence = 0;
 
+    Stats(int stamina, int power, int deffence) {
+        setStamina(stamina);
+        setPower(power);
+        setDeffence(deffence);
+    }
+
 
     public int getStamina() {
         return stamina;
