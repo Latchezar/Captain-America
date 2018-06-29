@@ -2,14 +2,13 @@ package Items;
 
 import Creatures.Stats;
 
-public class WeaponStats extends ItemStats
+public class WeaponStats extends Stats
 {
     private int minDamage;
     private int maxDamage;
 
-    public WeaponStats(Stats stats, int minDamage, int maxDamage)
+    public WeaponStats(int minDamage, int maxDamage)
     {
-        super(stats);
         setMinDamage(minDamage);
         setMaxDamage(maxDamage);
     }
