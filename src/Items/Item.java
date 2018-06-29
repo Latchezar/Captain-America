@@ -1,18 +1,21 @@
 package Items;
 
 import Creatures.HeroClass;
+import Creatures.Stats;
 
 public abstract class Item
 {
     private String itemName;
     private int requiredLevel;
-    HeroClass heroClass;
+    private HeroClass heroClass;
+    private Stats itemStats;
 
-    public Item (String name, int requiredLevel, HeroClass heroClass)
+    public Item (String name, int requiredLevel, HeroClass heroClass, Stats itemStats)
     {
         setItemName(name);
         setRequiredLevel(requiredLevel);
-        this.heroClass = heroClass;
+        setHeroClass(heroClass);
+        setItemStats(itemStats);
     }
 
     public String getItemName()
@@ -33,5 +36,25 @@ public abstract class Item
     public void setRequiredLevel(int requiredLevel)
     {
         this.requiredLevel = requiredLevel;
+    }
+
+    public HeroClass getHeroClass()
+    {
+        return heroClass;
+    }
+
+    public void setHeroClass(HeroClass heroClass)
+    {
+        this.heroClass = heroClass;
+    }
+
+    public Stats getItemStats()
+    {
+        return itemStats;
+    }
+
+    public void setItemStats(Stats itemStats)
+    {
+        this.itemStats = itemStats;
     }
 }
