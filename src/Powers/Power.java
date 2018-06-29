@@ -3,11 +3,14 @@ package Powers;
 public abstract class Power {
     private  String name;
     private  PowerType powertype;
-    private  int baseDamage;
+    private  int powerDamage;
 
     public Power(String name,PowerType powerType,int baseDamage){
-
+      this.name = name;
+      this.powertype = powerType;
+      this.powerDamage = baseDamage;
     }
+
 
 
 
@@ -28,10 +31,10 @@ public abstract class Power {
     }
 
     public int getBaseDamage() {
-        return baseDamage;
+        return powerDamage;
     }
 
     public void setBaseDamage(int baseDamage) {
-        this.baseDamage = baseDamage;
+        this.powerDamage = baseDamage;
     }
 }
