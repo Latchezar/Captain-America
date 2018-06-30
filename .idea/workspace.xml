@@ -73,6 +73,7 @@
       <file leaf-file-name="Hunter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Creatures/Hunter.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-915">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
@@ -102,6 +103,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+=======
+            <state relative-caret-position="571">
+              <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+>>>>>>> 4d688a78dbc4b439ef578221c15d781057a37d9e
             </state>
           </provider>
         </entry>
@@ -155,7 +160,11 @@
               <item name="Captain-America" type="b2602c69:ProjectViewProjectNode" />
               <item name="Captain-America" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="Creatures" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="UiFeatures" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 4d688a78dbc4b439ef578221c15d781057a37d9e
             </path>
           </expand>
           <select />
@@ -238,6 +247,10 @@
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
+=======
+      <window_info anchor="bottom" id="Messages" weight="0.3292683" />
+>>>>>>> 4d688a78dbc4b439ef578221c15d781057a37d9e
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
@@ -352,6 +365,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Creatures/Paladin.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="400">
           <caret line="91" column="63" selection-start-line="91" selection-start-column="63" selection-end-line="91" selection-end-column="63" />
           <folding>
@@ -367,6 +381,10 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="571">
+          <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+>>>>>>> 4d688a78dbc4b439ef578221c15d781057a37d9e
         </state>
       </provider>
     </entry>

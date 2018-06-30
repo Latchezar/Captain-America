@@ -7,8 +7,9 @@ public class WeaponStats extends Stats
     private int minDamage;
     private int maxDamage;
 
-    public WeaponStats(int minDamage, int maxDamage)
+    public WeaponStats(int stamina, int power, int defence, int minDamage, int maxDamage)
     {
+        super(stamina, power, defence);
         setMinDamage(minDamage);
         setMaxDamage(maxDamage);
     }
