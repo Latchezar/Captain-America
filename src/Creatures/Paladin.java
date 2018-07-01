@@ -1,6 +1,8 @@
 package Creatures;
 
+import Powers.HeroPower;
 import Powers.Power;
+import Powers.PowerType;
 
 public class Paladin extends Hero implements HeroAbilities {
 
@@ -72,23 +74,23 @@ public class Paladin extends Hero implements HeroAbilities {
 
     void addPower() {
         if (this.getCurrentLvl() == 3) {
-            Power powerforlvl3 = new Power();
-            addHeroPower(powerforlvl3);
+            HeroPower hammerOfWrath = new HeroPower("Hammer Of Wrath", PowerType.MELEE, 8, 3, HeroClass.PALADIN);
+            addHeroPower(hammerOfWrath);
             return;
         }
         if (this.getCurrentLvl() == 5) {
-            Power powerforlvl5;
-            addHeroPower(powerforlvl5);
+            HeroPower holyLight = new HeroPower("Holy Light", PowerType.HEAL, 20, 5, HeroClass.PALADIN);
+            addHeroPower(holyLight);
             return;
         }
         if (this.getCurrentLvl() == 7) {
-            Power powerforlvl7;
-            addHeroPower(powerforlvl7);
+            HeroPower crusaderStrike = new HeroPower("Crusader Strike", PowerType.MELEE, 67, 7, HeroClass.PALADIN);
+            addHeroPower(crusaderStrike);
             return;
         }
         if (this.getCurrentLvl() == 10) {
-            Power powerforlvl10;
-            addHeroPower(powerforlvl10);
+            HeroPower divineStorm = new HeroPower("Divine Storm", PowerType.MAGIC, 95, 10, HeroClass.PALADIN);
+            addHeroPower(divineStorm);
             return;
         }
     }

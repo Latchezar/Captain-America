@@ -1,6 +1,8 @@
 package Creatures;
 
+import Powers.HeroPower;
 import Powers.Power;
+import Powers.PowerType;
 
 public class Mage extends Hero implements HeroAbilities{
     private Stats heroStats;
@@ -69,23 +71,23 @@ public class Mage extends Hero implements HeroAbilities{
 
     void addPower() {
         if (this.getCurrentLvl() == 3) {
-            Power powerforlvl3 = new Power();
-            addHeroPower(powerforlvl3);
+            HeroPower arcaneMissiles = new HeroPower("Arcane Missiles", PowerType.MAGIC, 15, 3, HeroClass.MAGE);
+            addHeroPower(arcaneMissiles);
             return;
         }
         if (this.getCurrentLvl() == 5) {
-            Power powerforlvl5;
-            addHeroPower(powerforlvl5);
+            HeroPower pyroblast = new HeroPower("Pyroblast", PowerType.MAGIC, 40, 5, HeroClass.MAGE);
+            addHeroPower(pyroblast);
             return;
         }
         if (this.getCurrentLvl() == 7) {
-            Power powerforlvl7;
-            addHeroPower(powerforlvl7);
+            HeroPower glacialSpike = new HeroPower("Glacial Spike", PowerType.MAGIC, 80, 7, HeroClass.MAGE);
+            addHeroPower(glacialSpike);
             return;
         }
         if (this.getCurrentLvl() == 10) {
-            Power powerforlvl10;
-            addHeroPower(powerforlvl10);
+            HeroPower livingBomb = new HeroPower("Living Bomb", PowerType.MAGIC, 110, 10, HeroClass.MAGE);
+            addHeroPower(livingBomb);
             return;
         }
     }

@@ -1,6 +1,8 @@
 package Creatures;
 
+import Powers.HeroPower;
 import Powers.Power;
+import Powers.PowerType;
 
 public class Warrior extends Hero implements HeroAbilities{
     private Stats heroStats;
@@ -69,23 +71,23 @@ public class Warrior extends Hero implements HeroAbilities{
 
     void addPower() {
         if (this.getCurrentLvl() == 3) {
-            Power powerforlvl3 = new Power();
-            addHeroPower(powerforlvl3);
+            HeroPower mortalStrike = new HeroPower("Mortal Strike", PowerType.MELEE, 10, 3, HeroClass.WARRIOR);
+            addHeroPower(mortalStrike);
             return;
         }
         if (this.getCurrentLvl() == 5) {
-            Power powerforlvl5;
-            addHeroPower(powerforlvl5);
+            HeroPower overpower = new HeroPower("Overpower", PowerType.MELEE, 33, 5, HeroClass.WARRIOR);
+            addHeroPower(overpower);
             return;
         }
         if (this.getCurrentLvl() == 7) {
-            Power powerforlvl7;
-            addHeroPower(powerforlvl7);
+            HeroPower rampage = new HeroPower("Rampage", PowerType.MELEE, 77, 7, HeroClass.WARRIOR);
+            addHeroPower(rampage);
             return;
         }
         if (this.getCurrentLvl() == 10) {
-            Power powerforlvl10;
-            addHeroPower(powerforlvl10);
+            HeroPower bladestorm = new HeroPower("Bladestorm", PowerType.MELEE, 100, 10, HeroClass.WARRIOR);
+            addHeroPower(bladestorm);
             return;
         }
     }

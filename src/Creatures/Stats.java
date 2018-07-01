@@ -5,7 +5,7 @@ public class Stats {
     private int power = 0;
     private int deffence = 0;
 
-    Stats(int stamina, int power, int deffence) {
+    public Stats(int stamina, int power, int deffence) {
         setStamina(stamina);
         setPower(power);
         setDeffence(deffence);
