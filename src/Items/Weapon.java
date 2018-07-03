@@ -7,22 +7,10 @@ public class Weapon extends Item
 {
     private WeaponStats weaponStats;
 
-    public Weapon(String name, int requiredLevel, HeroClass heroClass, WeaponType weaponType, Stats itemStats, WeaponStats weaponStats)
+    public Weapon(String name, int itemLevel, int minDamage, int maxDamage)
     {
-        super(name, requiredLevel, heroClass, itemStats);
-        setItemType(weaponType);
-        setWeaponStats(weaponStats);
-    }
-
-    @Override
-    public WeaponType getItemType()
-    {
-        return itemType;
-    }
-
-    public void setItemType(WeaponType weaponType)
-    {
-        this.itemType = weaponType;
+        super(name, itemLevel, ItemType.WEAPON);
+        setWeaponStats(minDamage, maxDamage);
     }
 
     public WeaponStats getWeaponStats()
@@ -30,8 +18,8 @@ public class Weapon extends Item
         return weaponStats;
     }
 
-    public void setWeaponStats(WeaponStats weaponStats)
+    public void setWeaponStats(int minDamage, int maxDamage)
     {
-        this.weaponStats = weaponStats;
+        this.weaponStats = new WeaponStats(minDamage, maxDamage);
     }
 }

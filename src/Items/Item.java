@@ -1,25 +1,26 @@
 package Items;
 
-import Creatures.HeroClass;
-import Creatures.Stats;
 
 public abstract class Item
 {
     private String itemName;
     private int itemLevel;
-    private HeroClass heroClass;
-
     private ItemType itemType;
 
-    public Item (String name, int requiredLevel, HeroClass heroClass,  ItemType itemType)
+    public Item (String name, int itemLevel, ItemType itemType)
     {
         setItemName(name);
-        setItemLevel(requiredLevel);
-        setHeroClass(heroClass);
-
+        setItemLevel(itemLevel);
+        setItemType(itemType);
     }
 
-    public abstract ArmourType getItemType();
+    public ItemType getItemType() {
+        return itemType;
+    }
+
+    private void setItemType(ItemType itemType) {
+        this.itemType = itemType;
+    }
 
     public String getItemName()
     {
@@ -39,25 +40,5 @@ public abstract class Item
     public void setItemLevel(int itemLevel)
     {
         this.itemLevel = itemLevel;
-    }
-
-    public HeroClass getHeroClass()
-    {
-        return heroClass;
-    }
-
-    public void setHeroClass(HeroClass heroClass)
-    {
-        this.heroClass = heroClass;
-    }
-
-    public Stats getItemStats()
-    {
-        return itemStats;
-    }
-
-    public void setItemStats(Stats itemStats)
-    {
-        this.itemStats = itemStats;
     }
 }
