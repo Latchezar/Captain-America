@@ -7,9 +7,9 @@ public class NPC extends Creature
     private Item loot;
     private int expDrop;
 
-    public NPC(String name, int currentLvL, int currenHealth, Item loot, int expDrop)
+    public NPC(String name, int currentLevel, Item loot, int expDrop)
     {
-        super(name, currentLvL, currenHealth);
+        super(name, currentLevel);
         setLoot(loot);
         setExpDrop(expDrop);
     }
