@@ -1,5 +1,7 @@
 package Creatures;
 
+import Items.Armour;
+import Items.Weapon;
 import Powers.Power;
 
 import java.util.ArrayList;
@@ -8,8 +10,9 @@ public abstract class Hero extends Creature {
     private final int MAX_LVL = 10;
     private Race race;
     private int currentXP = 1;
-    ArrayList<Power> currentPowers;
-
+    private ArrayList<Power> currentPowers;
+    private Weapon weapon;
+    private ArrayList<Armour> items;
     {
         currentPowers = new ArrayList<>();
     }
@@ -38,5 +41,17 @@ public abstract class Hero extends Creature {
 
     public void setRace(Race race) {
         this.race = race;
+    }
+
+    public ArrayList<Power> getCurrentPowers(){
+        return currentPowers;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public ArrayList<Armour> getItems() {
+        return items;
     }
 }

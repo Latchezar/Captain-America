@@ -2,7 +2,7 @@ package Creatures;
 
 import Powers.Power;
 
-public class Hunter extends Hero implements HeroAbilities{
+public class Hunter extends Hero implements Attackable {
     private Stats heroStats;
     private int maxHealth;
 
@@ -10,15 +10,17 @@ public class Hunter extends Hero implements HeroAbilities{
     Hunter(String name, Race race){
         super(name, race);
         setHeroStats(race, 1, 3, 1); //those are magical numbers :D
-        setMaxHealth(this.heroStats.getStamina()*10+1*10);
+        setMaxHealth();
         this.setCurrenHealth(maxHealth);
     }
 
     public int getMaxHealth() {
         return maxHealth;
     }
-    public void useAbility(){
-        //to use some power
+
+    @Override
+    public void useAbility(int index, NPC attacked){
+
     }
 
     private int deffHealth(){
@@ -63,8 +65,8 @@ public class Hunter extends Hero implements HeroAbilities{
         return heroStats;
     }
 
-    public void setMaxHealth(int maxHealth) {
-        this.maxHealth = maxHealth;
+    public void setMaxHealth() {
+        this.maxHealth = this.heroStats.getStamina()*10+this.getCurrentLvl()*10;
     }
 
     void addPower() {

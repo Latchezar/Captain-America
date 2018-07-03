@@ -2,7 +2,7 @@ package Creatures;
 
 import Powers.Power;
 
-public class Priest extends Hero implements HeroAbilities {
+public class Priest extends Hero implements Attackable {
     private Stats heroStats;
     private int maxHealth;
 

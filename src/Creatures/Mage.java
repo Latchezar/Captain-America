@@ -1,10 +1,11 @@
 package Creatures;
 
 import Powers.HeroPower;
-import Powers.Power;
 import Powers.PowerType;
 
-public class Mage extends Hero implements HeroAbilities{
+import java.util.Random;
+
+public class Mage extends Hero implements Attackable {
     private Stats heroStats;
     private int maxHealth;
 
@@ -15,12 +16,21 @@ public class Mage extends Hero implements HeroAbilities{
         setMaxHealth(this.heroStats.getStamina()*10+1*10);
         this.setCurrenHealth(maxHealth);
     }
-
     public int getMaxHealth() {
         return maxHealth;
     }
-    public void useAbility(){
-     //to use some power
+
+    @Override
+    public void useAbility(int index, NPC attacked){
+        int damage = 0;
+        if (this.getWeapon() == null) {
+            damage = heroStats.getPower() + this.getCurrentPowers().get(index).getBaseDamage();
+        } else {
+            Random mask = new Random();
+            int weaponDamage = mask.nextInt(this.getWeapon().getWeaponStats().getMaxDamage())+this.getWeapon().getWeaponStats().getMinDamage();
+            damage = heroStats.getPower()  + weaponDamage + this.getCurrentPowers().get(index).getBaseDamage();
+        }
+        attacked.
     }
 
     private int deffHealth(){

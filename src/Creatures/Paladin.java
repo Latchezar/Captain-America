@@ -1,10 +1,9 @@
 package Creatures;
 
 import Powers.HeroPower;
-import Powers.Power;
 import Powers.PowerType;
 
-public class Paladin extends Hero implements HeroAbilities {
+public class Paladin extends Hero implements Attackable {
 
     private Stats heroStats;
     private int maxHealth;
