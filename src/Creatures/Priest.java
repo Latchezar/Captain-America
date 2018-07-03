@@ -1,6 +1,10 @@
 package Creatures;
 
+import Powers.HeroPower;
 import Powers.Power;
+import Powers.PowerType;
+
+import java.nio.channels.Pipe;
 
 public class Priest extends Hero implements Attackable {
     private Stats heroStats;
@@ -69,23 +73,23 @@ public class Priest extends Hero implements Attackable {
 
     void addPower() {
         if (this.getCurrentLvl() == 3) {
-            Power powerforlvl3 = new Power();
-            addHeroPower(powerforlvl3);
+            Power smite = new HeroPower("Smite", PowerType.MAGIC, 5, 3, HeroClass.PRIEST);
+            addHeroPower(smite);
             return;
         }
         if (this.getCurrentLvl() == 5) {
-            Power powerforlvl5;
-            addHeroPower(powerforlvl5);
+            Power shadowWord = new HeroPower("Shadow Word", PowerType.MAGIC, 20,5, HeroClass.PRIEST);
+            addHeroPower(shadowWord);
             return;
         }
         if (this.getCurrentLvl() == 7) {
-            Power powerforlvl7;
-            addHeroPower(powerforlvl7);
+            Power holyFire = new HeroPower("Holy Fire", PowerType.MAGIC, 45,7, HeroClass.PRIEST);
+            addHeroPower(holyFire);
             return;
         }
         if (this.getCurrentLvl() == 10) {
-            Power powerforlvl10;
-            addHeroPower(powerforlvl10);
+            Power vampireTouch = new HeroPower("Vampire Touch", PowerType.MAGIC, 100,10, HeroClass.PRIEST);
+            addHeroPower(vampireTouch);
             return;
         }
     }
