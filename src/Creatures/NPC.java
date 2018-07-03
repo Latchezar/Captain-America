@@ -5,14 +5,13 @@ import Items.Item;
 public class NPC extends Creature
 {
     private Item loot;
-    private int expDrop;
     private NPSType type;
 
-    public NPC(String name, int currentLevel, Item loot, int expDrop)
+    public NPC(String name, int currentLevel, Item loot)
     {
         super(name, currentLevel);
         setLoot(loot);
-        setExpDrop(expDrop);
+
     }
 
     public Item getLoot()
@@ -23,16 +22,6 @@ public class NPC extends Creature
     public void setLoot(Item loot)
     {
         this.loot = loot;
-    }
-
-    public int getExpDrop()
-    {
-        return expDrop;
-    }
-
-    public void setExpDrop(int expDrop)
-    {
-        this.expDrop = expDrop;
     }
 
     public int receiveAttack(int damage)

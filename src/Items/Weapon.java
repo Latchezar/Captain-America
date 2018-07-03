@@ -5,21 +5,30 @@ import Creatures.Stats;
 
 public class Weapon extends Item
 {
-    private WeaponStats weaponStats;
+    private int minDamage;
+    private int maxDamage;
 
     public Weapon(String name, int itemLevel, int minDamage, int maxDamage)
     {
         super(name, itemLevel, ItemType.WEAPON);
-        setWeaponStats(minDamage, maxDamage);
+        setMinDamage(minDamage);
+        setMaxDamage(maxDamage);
     }
 
-    public WeaponStats getWeaponStats()
-    {
-        return weaponStats;
+
+    public int getMaxDamage() {
+        return maxDamage;
     }
 
-    public void setWeaponStats(int minDamage, int maxDamage)
-    {
-        this.weaponStats = new WeaponStats(minDamage, maxDamage);
+    public void setMaxDamage(int maxDamage) {
+        this.maxDamage = maxDamage;
+    }
+
+    public int getMinDamage() {
+        return minDamage;
+    }
+
+    public void setMinDamage(int minDamage) {
+        this.minDamage = minDamage;
     }
 }
