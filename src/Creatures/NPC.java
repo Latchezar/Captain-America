@@ -6,6 +6,7 @@ public class NPC extends Creature
 {
     private Item loot;
     private int expDrop;
+    private NPSType type;
 
     public NPC(String name, int currentLevel, Item loot, int expDrop)
     {
@@ -42,6 +43,25 @@ public class NPC extends Creature
         {
             return 0;
         }
-        return 1;
+        int damageToReturn = getDamage() * this.getCurrentLvl();
+        return damageToReturn;
+    }
+
+
+    private int getDamage(){
+        switch (type){
+            case UNDEAD:
+                return 2;
+            case DEMON:
+                return 4;
+            case ANIMAL:
+                return 2;
+            case HUMANOID:
+                return 3;
+        }
+    }
+
+    public void setType(NPSType type) {
+        this.type = type;
     }
 }
