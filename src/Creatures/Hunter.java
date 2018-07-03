@@ -1,6 +1,8 @@
 package Creatures;
 
+import Powers.HeroPower;
 import Powers.Power;
+import Powers.PowerType;
 
 public class Hunter extends Hero implements HeroAbilities{
     private Stats heroStats;
@@ -69,23 +71,23 @@ public class Hunter extends Hero implements HeroAbilities{
 
     void addPower() {
         if (this.getCurrentLvl() == 3) {
-            Power powerforlvl3 = new Power();
-            addHeroPower(powerforlvl3);
+            Power arcaneShot = new HeroPower("Arcane Shot", PowerType.RANGED,10,3,HeroClass.HUNTER);
+            addHeroPower(arcaneShot);
             return;
         }
         if (this.getCurrentLvl() == 5) {
-            Power powerforlvl5;
-            addHeroPower(powerforlvl5);
+            Power multiShot = new HeroPower("Multi Shot", PowerType.RANGED, 50, 5, HeroClass.HUNTER);
+            addHeroPower(multiShot);
             return;
         }
         if (this.getCurrentLvl() == 7) {
-            Power powerforlvl7;
-            addHeroPower(powerforlvl7);
+            Power ViperString= new HeroPower("Viper String", PowerType.RANGED, 75, 7, HeroClass.HUNTER);
+            addHeroPower(ViperString);
             return;
         }
         if (this.getCurrentLvl() == 10) {
-            Power powerforlvl10;
-            addHeroPower(powerforlvl10);
+            Power serpentString = new HeroPower("Serpent String", PowerType.RANGED, 100, 10, HeroClass.HUNTER);
+            addHeroPower(serpentString);
             return;
         }
     }
