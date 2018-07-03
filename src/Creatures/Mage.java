@@ -26,8 +26,11 @@ public class Mage extends Hero implements Attackable {
         if (this.getWeapon() == null) {
             damage = heroStats.getPower() + this.getCurrentPowers().get(index).getBaseDamage();
         } else {
-            Random mask = new Random();
-            int weaponDamage = mask.nextInt(this.getWeapon().getWeaponStats().getMaxDamage())+this.getWeapon().getWeaponStats().getMinDamage();
+            Random rand = new Random();
+            int min_damage = this.getWeapon().getWeaponStats().getMinDamage();
+            int max_damage = this.getWeapon().getWeaponStats().getMaxDamage();
+
+            int weaponDamage = rand.nextInt((max_damage - min_damage) + 1) + min_damage;
             damage = heroStats.getPower()  + weaponDamage + this.getCurrentPowers().get(index).getBaseDamage();
         }
         int returnedDamaged = attacked.receiveAttack()
