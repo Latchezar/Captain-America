@@ -33,4 +33,15 @@ public class NPC extends Creature
     {
         this.expDrop = expDrop;
     }
+
+    public int receiveAttack(int damage)
+    {
+        int life = getCurrenHealth() - damage;
+
+        if (life <= 0)
+        {
+            return 0;
+        }
+        return 1;
+    }
 }
