@@ -9,10 +9,11 @@ import java.util.ArrayList;
 public abstract class Hero extends Creature {
     private final int MAX_LVL = 10;
     private Race race;
-    private int currentXP = 1;
+    protected int currentXP = 1;
     private ArrayList<Power> currentPowers;
     private Weapon weapon;
     private ArrayList<Armour> items;
+
     {
         currentPowers = new ArrayList<>();
     }

@@ -9,14 +9,17 @@ public abstract class Item
     private int requiredLevel;
     private HeroClass heroClass;
     private Stats itemStats;
+    private ItemType itemType;
 
-    public Item (String name, int requiredLevel, HeroClass heroClass, Stats itemStats)
+    public Item (String name, int requiredLevel, HeroClass heroClass, Stats itemStats, ItemType itemType)
     {
         setItemName(name);
         setRequiredLevel(requiredLevel);
         setHeroClass(heroClass);
         setItemStats(itemStats);
     }
+
+    public abstract ArmourType getItemType();
 
     public String getItemName()
     {

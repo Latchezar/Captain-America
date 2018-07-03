@@ -5,24 +5,24 @@ import Creatures.Stats;
 
 public class Weapon extends Item
 {
-    private WeaponType weaponType;
     private WeaponStats weaponStats;
 
     public Weapon(String name, int requiredLevel, HeroClass heroClass, WeaponType weaponType, Stats itemStats, WeaponStats weaponStats)
     {
         super(name, requiredLevel, heroClass, itemStats);
-        setWeaponType(weaponType);
+        setItemType(weaponType);
         setWeaponStats(weaponStats);
     }
 
-    public WeaponType getWeaponType()
+    @Override
+    public WeaponType getItemType()
     {
-        return weaponType;
+        return itemType;
     }
 
-    public void setWeaponType(WeaponType weaponType)
+    public void setItemType(WeaponType weaponType)
     {
-        this.weaponType = weaponType;
+        this.itemType = weaponType;
     }
 
     public WeaponStats getWeaponStats()

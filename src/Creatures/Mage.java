@@ -1,5 +1,6 @@
 package Creatures;
 
+import Items.Item;
 import Powers.HeroPower;
 import Powers.PowerType;
 
@@ -30,7 +31,17 @@ public class Mage extends Hero implements Attackable {
             int weaponDamage = mask.nextInt(this.getWeapon().getWeaponStats().getMaxDamage())+this.getWeapon().getWeaponStats().getMinDamage();
             damage = heroStats.getPower()  + weaponDamage + this.getCurrentPowers().get(index).getBaseDamage();
         }
-        int returnedDamaged = attacked.receiveAttack()
+        int returnedDamaged = attacked.receiveAttack(damage);
+        if (returnedDamaged == 0) {
+            //ma toi umrql ma
+            int xp = attacked.getExpDrop();
+            Item dropped = attacked.getLoot();
+            this.currentXP += xp;
+            if (this.getCurrentLvl() - 1 <= currentXP/10) {
+                this.setCurrentLvl(this.getCurrentLvl() + 1);
+            }
+            if (dropped.)
+        }
     }
 
     private int deffHealth(){

@@ -5,21 +5,21 @@ import Creatures.Stats;
 
 public class Armour extends Item
 {
-    private ArmourType armourType;
+    private ArmourType itemType;
 
     public Armour(String name, int requiredLevel, HeroClass heroClass, Stats itemStats, ArmourType armourType)
     {
         super(name, requiredLevel, heroClass, itemStats);
-        setArmourType(armourType);
+        setItemType(armourType);
     }
 
-    public ArmourType getArmourType()
+    public ArmourType getItemType()
     {
-        return armourType;
+        return itemType;
     }
 
-    public void setArmourType(ArmourType armourType)
+    public void setItemType(ArmourType armourType)
     {
-        this.armourType = armourType;
+        this.itemType = armourType;
     }
 }

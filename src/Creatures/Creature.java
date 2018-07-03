@@ -23,7 +23,7 @@ public class Creature {
         return currentLvl;
     }
 
-    private void setCurrentLvl(int currentLvl) {
+    protected void setCurrentLvl(int currentLvl) {
         this.currentLvl = currentLvl;
     }
 
