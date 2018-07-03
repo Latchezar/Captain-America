@@ -30,7 +30,7 @@ public class Mage extends Hero implements Attackable {
             int weaponDamage = mask.nextInt(this.getWeapon().getWeaponStats().getMaxDamage())+this.getWeapon().getWeaponStats().getMinDamage();
             damage = heroStats.getPower()  + weaponDamage + this.getCurrentPowers().get(index).getBaseDamage();
         }
-        attacked.
+        int returnedDamaged = attacked.receiveAttack()
     }
 
     private int deffHealth(){
