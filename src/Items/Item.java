@@ -6,7 +6,7 @@ import Creatures.Stats;
 public abstract class Item
 {
     private String itemName;
-    private int requiredLevel;
+    private int itemLevel;
     private HeroClass heroClass;
     private Stats itemStats;
     private ItemType itemType;
@@ -14,7 +14,7 @@ public abstract class Item
     public Item (String name, int requiredLevel, HeroClass heroClass, Stats itemStats, ItemType itemType)
     {
         setItemName(name);
-        setRequiredLevel(requiredLevel);
+        setItemLevel(requiredLevel);
         setHeroClass(heroClass);
         setItemStats(itemStats);
     }
@@ -31,14 +31,14 @@ public abstract class Item
         this.itemName = itemName;
     }
 
-    public int getRequiredLevel()
+    public int getItemLevel()
     {
-        return requiredLevel;
+        return itemLevel;
     }
 
-    public void setRequiredLevel(int requiredLevel)
+    public void setItemLevel(int itemLevel)
     {
-        this.requiredLevel = requiredLevel;
+        this.itemLevel = itemLevel;
     }
 
     public HeroClass getHeroClass()

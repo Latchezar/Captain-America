@@ -59,6 +59,7 @@ public class NPC extends Creature
             case HUMANOID:
                 return 3;
         }
+        return -1;
     }
 
     public void setType(NPSType type) {
