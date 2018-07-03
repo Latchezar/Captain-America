@@ -1,25 +1,23 @@
 package Items;
 
-import Creatures.HeroClass;
 import Creatures.Stats;
 
 public class Armour extends Item
 {
-    private ArmourType armourType;
+    private Stats itemStats;
 
-    public Armour(String name, int requiredLevel, HeroClass heroClass, Stats itemStats, ArmourType armourType)
+    public Armour(String name, int itemLevel, ItemType itemType, int stamina, int power, int deffence)
     {
-        super(name, requiredLevel, heroClass, itemStats);
-        setArmourType(armourType);
+        super(name, itemLevel, itemType);
+        setItemStats(stamina, power, deffence);
     }
 
-    public ArmourType getArmourType()
-    {
-        return armourType;
+
+    public Stats getItemStats() {
+        return itemStats;
     }
 
-    public void setArmourType(ArmourType armourType)
-    {
-        this.armourType = armourType;
+    public void setItemStats(int stamina, int power, int deffence) {
+        this.itemStats = new Stats(stamina, power, deffence);
     }
 }
