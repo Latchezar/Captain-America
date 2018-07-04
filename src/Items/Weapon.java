@@ -7,12 +7,14 @@ public class Weapon extends Item
 {
     private int minDamage;
     private int maxDamage;
+    private WeaponType type;
 
-    public Weapon(String name, int itemLevel, int minDamage, int maxDamage)
+    public Weapon(String name, int itemLevel, int minDamage, int maxDamage, WeaponType type)
     {
         super(name, itemLevel, ItemType.WEAPON);
         setMinDamage(minDamage);
         setMaxDamage(maxDamage);
+        setType(type);
     }
 
 
@@ -30,5 +32,15 @@ public class Weapon extends Item
 
     public void setMinDamage(int minDamage) {
         this.minDamage = minDamage;
+    }
+
+    public WeaponType getType()
+    {
+        return type;
+    }
+
+    public void setType(WeaponType type)
+    {
+        this.type = type;
     }
 }
