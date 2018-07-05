@@ -38,7 +38,9 @@ public class Mage extends Hero implements Attackable {
             int weaponDamage = rand.nextInt((max_damage - min_damage) + 1) + min_damage;
             damage = heroStats.getPower() + weaponDamage + this.getCurrentPowers().get(index).getBaseDamage();
         }
+        //the attack
         int returnedDamaged = attacked.receiveAttack(damage);
+        // check if dead
         if (returnedDamaged == 0) {
             //ma toi umrql ma
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
