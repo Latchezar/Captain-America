@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3248ed7c-561b-42b0-9fcb-15476534c8a3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Creatures/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Creatures/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Creatures/Paladin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Creatures/Paladin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Creatures/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Creatures/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Creatures/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Creatures/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Creatures/NPSType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Creatures/NPCType.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,15 +24,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stats.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Creatures/Stats.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Race.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Creatures/Race.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,8 +36,47 @@
       <file leaf-file-name="Priest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Creatures/Priest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+            <state relative-caret-position="234">
+              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Attackable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Creatures/Attackable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NPCType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Creatures/NPCType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Creature.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Creatures/Creature.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NPC.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Creatures/NPC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hunter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hunter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Creatures/Hunter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1224">
-              <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+            <state relative-caret-position="425">
+              <caret line="155" column="59" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -88,14 +117,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Items/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/Creatures/NPC.java" />
         <option value="$PROJECT_DIR$/src/Creatures/Hero.java" />
         <option value="$PROJECT_DIR$/src/Creatures/Mage.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/Creatures/Priest.java" />
         <option value="$PROJECT_DIR$/src/Creatures/Paladin.java" />
-        <option value="$PROJECT_DIR$/src/Creatures/Hunter.java" />
         <option value="$PROJECT_DIR$/src/Creatures/Warrior.java" />
+        <option value="$PROJECT_DIR$/src/Creatures/Hunter.java" />
+        <option value="$PROJECT_DIR$/src/Creatures/NPSType.java" />
+        <option value="$PROJECT_DIR$/src/Creatures/NPCType.java" />
+        <option value="$PROJECT_DIR$/src/Creatures/NPC.java" />
       </list>
     </option>
   </component>
@@ -257,13 +288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Creatures/NPC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Items/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -350,13 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Creatures/Priest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Creatures/Warrior.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1150">
@@ -366,8 +383,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Creatures/Hunter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+        <state relative-caret-position="425">
+          <caret line="155" column="59" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Creatures/Priest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Creatures/Attackable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Creatures/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Creatures/NPCType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Creatures/NPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
