@@ -2,24 +2,26 @@ package Creatures;
 
 import Items.Item;
 
+import java.util.ArrayList;
+
 public class NPC extends Creature
 {
-    private Item loot;
+    private ArrayList<Item> loot;
     private NPSType type;
 
-    public NPC(String name, int currentLevel, Item loot)
+    public NPC(String name, int currentLevel, ArrayList<Item> loot)
     {
         super(name, currentLevel);
         setLoot(loot);
 
     }
 
-    public Item getLoot()
+    public ArrayList<Item> getLoot()
     {
         return loot;
     }
 
-    public void setLoot(Item loot)
+    public void setLoot(ArrayList<Item> loot)
     {
         this.loot = loot;
     }

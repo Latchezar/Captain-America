@@ -1,6 +1,7 @@
 package Creatures;
 
 import Items.Armour;
+import Items.Item;
 import Items.Weapon;
 import Powers.Power;
 
@@ -12,6 +13,9 @@ public abstract class Hero extends Creature {
     protected int currentXP = 1;
     private ArrayList<Power> currentPowers;
     private Weapon weapon;
+    private Item helmet;
+    private Item chest;
+    private Item leggings;
     private ArrayList<Armour> items;
 
     {
@@ -24,35 +28,63 @@ public abstract class Hero extends Creature {
     }
 
 
-    public int getCurrentXP() {
+    protected int getCurrentXP() {
         return currentXP;
     }
 
-    void addHeroPower(Power power){
+    protected void addHeroPower(Power power){
         currentPowers.add(power);
     }
 
-    public Race getRace() {
+    protected Race getRace() {
         return race;
     }
 
-    public int getMAX_LVL() {
+    protected int getMAX_LVL() {
         return MAX_LVL;
     }
 
-    public void setRace(Race race) {
+    protected void setRace(Race race) {
         this.race = race;
     }
 
-    public ArrayList<Power> getCurrentPowers(){
+    protected ArrayList<Power> getCurrentPowers(){
         return currentPowers;
     }
 
-    public Weapon getWeapon() {
+    protected Weapon getWeapon() {
         return weapon;
     }
 
-    public ArrayList<Armour> getItems() {
+    protected ArrayList<Armour> getItems() {
         return items;
+    }
+
+    protected void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+    protected Item getChest() {
+        return chest;
+    }
+
+    protected void setChest(Item chest) {
+        this.chest = chest;
+    }
+
+    protected Item getHelmet() {
+        return helmet;
+    }
+
+    protected Item getLeggings() {
+        return leggings;
+    }
+
+    protected void setLeggings(Item leggings) {
+        this.leggings = leggings;
+    }
+
+    protected void setHelmet(Item helmet) {
+        this.helmet = helmet;
     }
 }
