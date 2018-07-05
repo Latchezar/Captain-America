@@ -50,7 +50,7 @@ public class Warrior extends Hero implements Attackable {
 
                 if (dropped.getItemType() == ItemType.WEAPON) {
                     Weapon mask = (Weapon) dropped;
-                    if (mask.getType() == WeaponType.STAFF) {
+                    if (mask.getType() == WeaponType.SWORD) {
                         if (this.getWeapon() == null) {
                             this.setWeapon(mask);
                         } else {

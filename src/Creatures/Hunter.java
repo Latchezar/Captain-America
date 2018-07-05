@@ -52,7 +52,7 @@ public class Hunter extends Hero implements Attackable {
 
                 if (dropped.getItemType() == ItemType.WEAPON) {
                     Weapon mask = (Weapon) dropped;
-                    if (mask.getType() == WeaponType.STAFF) {
+                    if (mask.getType() == WeaponType.BOW) {
                         if (this.getWeapon() == null) {
                             this.setWeapon(mask);
                         } else {
@@ -148,12 +148,12 @@ public class Hunter extends Hero implements Attackable {
             return;
         }
         if (this.getCurrentLvl() == 7) {
-            Power ViperString= new HeroPower("Viper String", PowerType.RANGED, 75, 7, HeroClass.HUNTER);
+            Power ViperString= new HeroPower("Viper Sting", PowerType.RANGED, 75, 7, HeroClass.HUNTER);
             addHeroPower(ViperString);
             return;
         }
         if (this.getCurrentLvl() == 10) {
-            Power serpentString = new HeroPower("Serpent String", PowerType.RANGED, 100, 10, HeroClass.HUNTER);
+            Power serpentString = new HeroPower("Serpent Sting", PowerType.RANGED, 100, 10, HeroClass.HUNTER);
             addHeroPower(serpentString);
             return;
         }
