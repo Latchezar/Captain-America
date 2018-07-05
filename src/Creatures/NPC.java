@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class NPC extends Creature
 {
     private ArrayList<Item> loot;
-    private NPSType type;
+    private NPCType type;
 
     public NPC(String name, int currentLevel, ArrayList<Item> loot)
     {
@@ -53,7 +53,7 @@ public class NPC extends Creature
         return -1;
     }
 
-    public void setType(NPSType type) {
+    public void setType(NPCType type) {
         this.type = type;
     }
 }

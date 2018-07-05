@@ -1,6 +1,7 @@
 package Creatures;
 
-public enum NPSType {
+public enum NPCType {
+
     UNDEAD,ANIMAL,HUMANOID,DEMON
 
 }
