@@ -9,7 +9,10 @@ public class Assets {
             humanHunter, humanMage, humanPaladin, humanPriest, humanWarrior,
             orcHunter, orcMage, orcPaladin, orcPriest, orcWarrior,
             trollHunter, trollMage, trollPaladin, trollPriest, trollWarrior,
-            undeadHunter, undeadMage, undeadPaladin, undeadPriest, undeadWarrior;
+            undeadHunter, undeadMage, undeadPaladin, undeadPriest, undeadWarrior, wolf,
+            hogger, boar, vultros, kingBangalash, panther, lurid, skeleton,
+            stiches, ghoul, hahkZor, ogre, nagaBoss, naga, bearBoss, shadowWeaver, illidan,
+            felguard, lichKing, voidWalker;
 
     public static void init(){
         //dwarf images
@@ -53,5 +56,30 @@ public class Assets {
         undeadPaladin = ImageLoader.loadImage("resources/undead-paladin.png");
         undeadPriest = ImageLoader.loadImage("resources/undead-priest.png");
         undeadWarrior = ImageLoader.loadImage("resources/undead-warrior.png");
+
+        // monsters
+
+        wolf          = ImageLoader.loadImage("resources/lvl1m.png");
+        hogger        = ImageLoader.loadImage("resources/lvl1b.png");
+        boar          = ImageLoader.loadImage("resources/lvl2m.png");
+        vultros       = ImageLoader.loadImage("resources/lvl2b.png");
+        kingBangalash = ImageLoader.loadImage("resources/lvl3b.png");
+        panther       = ImageLoader.loadImage("resources/lvl3m.png");
+        lurid         = ImageLoader.loadImage("resources/lvl4b.png");
+        skeleton      = ImageLoader.loadImage("resources/lvl4m.png");
+        stiches       = ImageLoader.loadImage("resources/lvl5b.png");
+        ghoul         = ImageLoader.loadImage("resources/lvl5m.png");
+        hahkZor       = ImageLoader.loadImage("resources/lvl6b.png");
+        ogre          = ImageLoader.loadImage("resources/lvl6m.png");
+        nagaBoss      = ImageLoader.loadImage("resources/lvl7b.png");
+        naga          = ImageLoader.loadImage("resources/lvl7m.png");
+        bearBoss      = ImageLoader.loadImage("resources/lvl8b.png");
+        shadowWeaver  = ImageLoader.loadImage("resources/lvl8m.png");
+        illidan       = ImageLoader.loadImage("resources/lvl9b.png");
+        felguard      = ImageLoader.loadImage("resources/lvl9m.png");
+        lichKing      = ImageLoader.loadImage("resources/lvl10b.png");
+        voidWalker    = ImageLoader.loadImage("resources/lvl10m.png");
+
+        // lvl - level, m - monster, b - boss
     }
 }
