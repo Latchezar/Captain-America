@@ -194,8 +194,4 @@ public class Hunter extends Hero implements Attackable {
 
     }
 
-    @Override
-    public void render(Graphics g){
-
-    }
 }

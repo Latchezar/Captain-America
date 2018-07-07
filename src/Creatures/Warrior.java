@@ -187,9 +187,4 @@ public class Warrior extends Hero implements Attackable {
     public void update(){
 
     }
-
-    @Override
-    public void render(Graphics g){
-
-    }
 }

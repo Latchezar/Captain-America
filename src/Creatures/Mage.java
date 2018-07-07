@@ -194,8 +194,4 @@ public class Mage extends Hero implements Attackable {
 
     }
 
-    @Override
-    public void render(Graphics g){
-
-    }
 }
