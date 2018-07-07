@@ -7,7 +7,10 @@ import Items.WeaponType;
 import Powers.HeroPower;
 import Powers.Power;
 import Powers.PowerType;
+import UiFeatures.Assets;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.nio.channels.Pipe;
 import java.util.Random;
 
@@ -16,8 +19,8 @@ public class Priest extends Hero implements Attackable {
     private int maxHealth;
 
 
-    Priest(String name, Race race){
-        super(name, race);
+    Priest(String name, Race race, float x, float y){
+        super(name, race, x , y);
         setHeroStats(race, 1, 4, 1); //those are magical numbers :D
         setMaxHealth(this.heroStats.getStamina()*10+1*10);
         this.setCurrenHealth(maxHealth);
@@ -157,5 +160,38 @@ public class Priest extends Hero implements Attackable {
             addHeroPower(vampireTouch);
             return;
         }
+    }
+    @Override
+    public void setImage(){
+        switch (this.getRace()){
+            case DWARF:
+                image = Assets.dwarfPriest;
+                break;
+            case HUMAN:
+                image = Assets.humanPriest;
+                break;
+            case ELF:
+                image = Assets.elfPriest;
+                break;
+            case ORC:
+                image = Assets.orcPriest;
+                break;
+            case TROLL:
+                image = Assets.trollPriest;
+                break;
+            case UNDEAD:
+                image = Assets.undeadPriest;
+        }
+    }
+    // UI
+
+    @Override
+    public void update(){
+
+    }
+
+    @Override
+    public void render(Graphics g){
+
     }
 }

@@ -6,7 +6,10 @@ import Items.Weapon;
 import Items.WeaponType;
 import Powers.HeroPower;
 import Powers.PowerType;
+import UiFeatures.Assets;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -15,8 +18,8 @@ public class Mage extends Hero implements Attackable {
     private int maxHealth;
 
 
-    Mage(String name, Race race){
-        super(name, race);
+    Mage(String name, Race race, float x, float y){
+        super(name, race, x , y);
         setHeroStats(race, 1, 4, 0);
         setMaxHealth(this.heroStats.getStamina()*10+1*10);
         this.setCurrenHealth(maxHealth);
@@ -159,5 +162,40 @@ public class Mage extends Hero implements Attackable {
             addHeroPower(livingBomb);
             return;
         }
+    }
+
+    @Override
+    public void setImage(){
+        switch (this.getRace()){
+            case DWARF:
+                image = Assets.dwarfMage;
+                break;
+            case HUMAN:
+                image = Assets.humanMage;
+                break;
+            case ELF:
+                image = Assets.elfMage;
+                break;
+            case ORC:
+                image = Assets.orcMage;
+                break;
+            case TROLL:
+                image = Assets.trollMage;
+                break;
+            case UNDEAD:
+                image = Assets.undeadMage;
+        }
+    }
+
+    // UI
+
+    @Override
+    public void update(){
+
+    }
+
+    @Override
+    public void render(Graphics g){
+
     }
 }

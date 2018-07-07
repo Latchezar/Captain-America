@@ -1,7 +1,12 @@
 package UiFeatures;
 
+import UiFeatures.states.GameState;
+import UiFeatures.states.MenuState;
+import UiFeatures.states.State;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
 public class Game implements Runnable{
 
@@ -15,21 +20,39 @@ public class Game implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
 
+    //states
+    private State gameState;
+    private State menuState;
+
+    //Input
+    private KeyManager keyManager;
+
     public Game(String title, int width, int height){
         this.width = width;
         this.height = height;
         this.title = title;
-
+        keyManager = new KeyManager();
     }
 
     private void init(){
         display = new Display(title, width, height);
+        display.getDisplayFrame().addKeyListener(keyManager);
+        Assets.init();
 
+        gameState = new GameState(this);
+        menuState = new MenuState(this);
+        State.setState(gameState);
     }
+
 
     private void update(){
+        keyManager.update();
 
+        if (State.getStat() != null) {
+            State.getStat().update();
+        }
     }
+
 
     private void render(){
         bs = display.getDisplayCanvas().getBufferStrategy();
@@ -41,9 +64,9 @@ public class Game implements Runnable{
         //clear the screen
         g.clearRect(0, 0, width, height);
         // draw here
-
-
-
+        if (State.getStat() != null) {
+            State.getStat().render(g);
+        }
 
         //draw end
         bs.show();
@@ -53,14 +76,30 @@ public class Game implements Runnable{
     public void run(){
         init();
 
+        int fps = 60;
+        double timePerTick = 1000000000 / fps;
+        double delta = 0;
+        long now;
+        long lastTime = System.nanoTime();
+
         while (isRunning){
+            now = System.nanoTime();
+            delta += (now - lastTime) / timePerTick;
+            lastTime = now;
 
-            update();
-            render();
+            if (delta >=  1) {
+                update();
+                render();
+                delta--;
+            }
 
-            stop();
         }
+        stop();
 
+    }
+
+    public KeyManager getKeyManager(){
+        return keyManager;
     }
 
     public synchronized void start() {

@@ -1,14 +1,27 @@
 package Creatures;
 
-public class Creature {
+import java.awt.*;
+import java.awt.image.BufferedImage;
+
+public abstract class Creature {
+    public static final int DEFAULT_WIDTH = 200,
+                            DEFAULT_HEIGTH = 370;
     private String name;
     private int currentLvl;
     private int currenHealth;
+    protected BufferedImage image;
+    protected float x, y;
+    protected int width, heigth;
 
-    public Creature(String name, int currentLvl) {
+
+    public Creature(String name, int currentLvl, float x, float y, int width, int heigth) {
         setName(name);
         setCurrentLvl(currentLvl);
         setCurrenHealth();
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.heigth = heigth;
     }
 
     public String getName() {
@@ -37,5 +50,12 @@ public class Creature {
     void setCurrenHealth(int currenHealth) {
         this.currenHealth = currenHealth;
     }
+
+
+    public abstract void update();
+    public void render(Graphics g, int x, int y) {
+        g.drawImage(image, x, y, width, heigth, null);
+    }
+    public abstract void setImage();
 
 }
