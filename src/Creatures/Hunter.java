@@ -1,9 +1,6 @@
 package Creatures;
 
-import Items.Item;
-import Items.ItemType;
-import Items.Weapon;
-import Items.WeaponType;
+import Items.*;
 import Powers.HeroPower;
 import Powers.Power;
 import Powers.PowerType;
@@ -66,25 +63,26 @@ public class Hunter extends Hero implements Attackable {
                         }
                     }
                 } else {
-                    if (dropped.getItemType() == ItemType.CHEST) {
+                    Armour mask = (Armour) dropped;
+                    if (mask.getType() == ArmourType.CHEST) {
                         if (this.getChest() == null) {
-                            this.setChest(dropped);
+                            this.setChest(mask);
                         } else {
                             if (this.getChest().getItemLevel() < dropped.getItemLevel()) {
-                                this.setChest(dropped);
+                                this.setChest(mask);
                             }
                         }
-                    } else if (dropped.getItemType() == ItemType.HELMET) {
+                    } else if (mask.getType() == ArmourType.HELMET) {
                         if (this.getHelmet() == null) {
-                            this.setHelmet(dropped);
+                            this.setHelmet(mask);
                         } else if (this.getHelmet().getItemLevel() < dropped.getItemLevel()) {
-                            this.setHelmet(dropped);
+                            this.setHelmet(mask);
                         }
-                    } else if (dropped.getItemType() == ItemType.BOOTS) {
+                    } else if (mask.getType() == ArmourType.BOOTS) {
                         if (this.getBoots() == null) {
-                            this.setBoots(dropped);
+                            this.setBoots(mask);
                         } else if (this.getBoots().getItemLevel() < dropped.getItemLevel()) {
-                            this.setBoots(dropped);
+                            this.setBoots(mask);
                         }
                     }
                 }
