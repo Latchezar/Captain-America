@@ -1,5 +1,9 @@
 package UiFeatures;
 
+import UiFeatures.states.GameState;
+import UiFeatures.states.MenuState;
+import UiFeatures.states.State;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
@@ -16,22 +20,30 @@ public class Game implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
 
+    //states
+    private State gameState;
+    private State menuState;
+
     public Game(String title, int width, int height){
         this.width = width;
         this.height = height;
         this.title = title;
-
     }
 
     private void init(){
         display = new Display(title, width, height);
         Assets.init();
+
+        gameState = new GameState(this);
+        menuState = new MenuState(this);
+        State.setState(gameState);
     }
 
-    int x = 0;
 
     private void update(){
-
+        if (State.getStat() != null) {
+            State.getStat().update();
+        }
     }
 
 
@@ -45,8 +57,9 @@ public class Game implements Runnable{
         //clear the screen
         g.clearRect(0, 0, width, height);
         // draw here
-
-        g.drawImage(Assets.dwarfHunter, 5, 5, null);
+        if (State.getStat() != null) {
+            State.getStat().render(g);
+        }
 
         //draw end
         bs.show();
