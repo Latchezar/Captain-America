@@ -164,6 +164,29 @@ public class Hunter extends Hero implements Attackable {
     }
 
 
+    @Override
+    public void setImage(){
+        switch (this.getRace()){
+            case DWARF:
+                image = Assets.dwarfHunter;
+                break;
+            case HUMAN:
+                image = Assets.humanHunter;
+                break;
+            case ELF:
+                image = Assets.elfHunter;
+                break;
+            case ORC:
+                image = Assets.orcHunter;
+                break;
+            case TROLL:
+                image = Assets.trollHunter;
+                break;
+            case UNDEAD:
+                image = Assets.undeadHunter;
+        }
+    }
+
     // UI
 
     @Override
@@ -173,26 +196,6 @@ public class Hunter extends Hero implements Attackable {
 
     @Override
     public void render(Graphics g){
-        BufferedImage heroImage = Assets.dwarfHunter;
-        switch (this.getRace()){
-            case DWARF:
-                heroImage = Assets.dwarfHunter;
-                break;
-            case HUMAN:
-                heroImage = Assets.humanHunter;
-                break;
-            case ELF:
-                heroImage = Assets.elfHunter;
-                break;
-            case ORC:
-                heroImage = Assets.orcHunter;
-                break;
-            case TROLL:
-                heroImage = Assets.trollHunter;
-                break;
-            case UNDEAD:
-                heroImage = Assets.undeadHunter;
-        }
-        g.drawImage(heroImage, (int) x, (int) y, width, heigth, null);
+
     }
 }

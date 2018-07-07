@@ -158,6 +158,28 @@ public class Warrior extends Hero implements Attackable {
             return;
         }
     }
+    @Override
+    public void setImage(){
+        switch (this.getRace()){
+            case DWARF:
+                image = Assets.dwarfWarrior;
+                break;
+            case HUMAN:
+                image = Assets.humanWarrior;
+                break;
+            case ELF:
+                image = Assets.elfWarrior;
+                break;
+            case ORC:
+                image = Assets.orcWarrior;
+                break;
+            case TROLL:
+                image = Assets.trollWarrior;
+                break;
+            case UNDEAD:
+                image = Assets.undeadWarrior;
+        }
+    }
 
     // UI
 
@@ -168,26 +190,6 @@ public class Warrior extends Hero implements Attackable {
 
     @Override
     public void render(Graphics g){
-        BufferedImage heroImage = Assets.dwarfWarrior;
-        switch (this.getRace()){
-            case DWARF:
-                heroImage = Assets.dwarfWarrior;
-                break;
-            case HUMAN:
-                heroImage = Assets.humanWarrior;
-                break;
-            case ELF:
-                heroImage = Assets.elfWarrior;
-                break;
-            case ORC:
-                heroImage = Assets.orcWarrior;
-                break;
-            case TROLL:
-                heroImage = Assets.trollWarrior;
-                break;
-            case UNDEAD:
-                heroImage = Assets.undeadWarrior;
-        }
-        g.drawImage(heroImage, (int) x, (int) y, width, heigth, null);
+
     }
 }

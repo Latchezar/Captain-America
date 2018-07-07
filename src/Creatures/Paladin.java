@@ -163,6 +163,28 @@ public class Paladin extends Hero implements Attackable {
         }
     }
 
+    @Override
+    public void setImage(){
+        switch (this.getRace()){
+            case DWARF:
+                image = Assets.dwarfPaladin;
+                break;
+            case HUMAN:
+                image = Assets.humanPaladin;
+                break;
+            case ELF:
+                image = Assets.elfPaladin;
+                break;
+            case ORC:
+                image = Assets.orcPaladin;
+                break;
+            case TROLL:
+                image = Assets.trollPaladin;
+                break;
+            case UNDEAD:
+                image = Assets.undeadPaladin;
+        }
+    }
     // UI
 
     @Override
@@ -172,26 +194,6 @@ public class Paladin extends Hero implements Attackable {
 
     @Override
     public void render(Graphics g){
-        BufferedImage heroImage = Assets.dwarfPaladin;
-        switch (this.getRace()){
-            case DWARF:
-                heroImage = Assets.dwarfPaladin;
-                break;
-            case HUMAN:
-                heroImage = Assets.humanPaladin;
-                break;
-            case ELF:
-                heroImage = Assets.elfPaladin;
-                break;
-            case ORC:
-                heroImage = Assets.orcPaladin;
-                break;
-            case TROLL:
-                heroImage = Assets.trollPaladin;
-                break;
-            case UNDEAD:
-                heroImage = Assets.undeadPaladin;
-        }
-        g.drawImage(heroImage, (int) x, (int) y, width, heigth, null);
+
     }
 }

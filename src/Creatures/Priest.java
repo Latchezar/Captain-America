@@ -161,7 +161,28 @@ public class Priest extends Hero implements Attackable {
             return;
         }
     }
-
+    @Override
+    public void setImage(){
+        switch (this.getRace()){
+            case DWARF:
+                image = Assets.dwarfPriest;
+                break;
+            case HUMAN:
+                image = Assets.humanPriest;
+                break;
+            case ELF:
+                image = Assets.elfPriest;
+                break;
+            case ORC:
+                image = Assets.orcPriest;
+                break;
+            case TROLL:
+                image = Assets.trollPriest;
+                break;
+            case UNDEAD:
+                image = Assets.undeadPriest;
+        }
+    }
     // UI
 
     @Override
@@ -171,26 +192,6 @@ public class Priest extends Hero implements Attackable {
 
     @Override
     public void render(Graphics g){
-        BufferedImage heroImage = Assets.dwarfPriest;
-        switch (this.getRace()){
-            case DWARF:
-                heroImage = Assets.dwarfPriest;
-                break;
-            case HUMAN:
-                heroImage = Assets.humanPriest;
-                break;
-            case ELF:
-                heroImage = Assets.elfPriest;
-                break;
-            case ORC:
-                heroImage = Assets.orcPriest;
-                break;
-            case TROLL:
-                heroImage = Assets.trollPriest;
-                break;
-            case UNDEAD:
-                heroImage = Assets.undeadPriest;
-        }
-        g.drawImage(heroImage, (int) x, (int) y, width, heigth, null);
+
     }
 }

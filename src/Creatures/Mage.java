@@ -164,6 +164,29 @@ public class Mage extends Hero implements Attackable {
         }
     }
 
+    @Override
+    public void setImage(){
+        switch (this.getRace()){
+            case DWARF:
+                image = Assets.dwarfMage;
+                break;
+            case HUMAN:
+                image = Assets.humanMage;
+                break;
+            case ELF:
+                image = Assets.elfMage;
+                break;
+            case ORC:
+                image = Assets.orcMage;
+                break;
+            case TROLL:
+                image = Assets.trollMage;
+                break;
+            case UNDEAD:
+                image = Assets.undeadMage;
+        }
+    }
+
     // UI
 
     @Override
@@ -173,26 +196,6 @@ public class Mage extends Hero implements Attackable {
 
     @Override
     public void render(Graphics g){
-        BufferedImage heroImage = Assets.dwarfMage;
-        switch (this.getRace()){
-            case DWARF:
-                heroImage = Assets.dwarfMage;
-                break;
-            case HUMAN:
-                heroImage = Assets.humanMage;
-                break;
-            case ELF:
-                heroImage = Assets.elfMage;
-                break;
-            case ORC:
-                heroImage = Assets.orcMage;
-                break;
-            case TROLL:
-                heroImage = Assets.trollMage;
-                break;
-            case UNDEAD:
-                heroImage = Assets.undeadMage;
-        }
-        g.drawImage(heroImage, (int) x, (int) y, width, heigth, null);
+
     }
 }

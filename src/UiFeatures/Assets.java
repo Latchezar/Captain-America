@@ -9,10 +9,10 @@ public class Assets {
             humanHunter, humanMage, humanPaladin, humanPriest, humanWarrior,
             orcHunter, orcMage, orcPaladin, orcPriest, orcWarrior,
             trollHunter, trollMage, trollPaladin, trollPriest, trollWarrior,
-            undeadHunter, undeadMage, undeadPaladin, undeadPriest, undeadWarrior, wolf,
-            hogger, boar, vultros, kingBangalash, panther, lurid, skeleton,
-            stiches, ghoul, hahkZor, ogre, nagaBoss, naga, bearBoss, shadowWeaver, illidan,
-            felguard, lichKing, voidWalker;
+            undeadHunter, undeadMage, undeadPaladin, undeadPriest, undeadWarrior,
+            oneMob, oneBoss, twoMob, twoBoss, threeMob, threeBoss, fourBoss, fourMob,
+            fiveMob, fiveBoss, sixBoss, sixMob, sevenBoss, sevenMob, eightBoss, eightMob,
+            nineBoss, nineMob, tenBoss, tenMob;
 
     public static void init(){
         //dwarf images
@@ -59,26 +59,26 @@ public class Assets {
 
         // monsters
 
-        wolf          = ImageLoader.loadImage("/lvl1m.png");
-        hogger        = ImageLoader.loadImage("/lvl1b.png");
-        boar          = ImageLoader.loadImage("/lvl2m.png");
-        vultros       = ImageLoader.loadImage("/lvl2b.png");
-        kingBangalash = ImageLoader.loadImage("/lvl3b.png");
-        panther       = ImageLoader.loadImage("/lvl3m.png");
-        lurid         = ImageLoader.loadImage("/lvl4b.png");
-        skeleton      = ImageLoader.loadImage("/lvl4m.png");
-        stiches       = ImageLoader.loadImage("/lvl5b.png");
-        ghoul         = ImageLoader.loadImage("/lvl5m.png");
-        hahkZor       = ImageLoader.loadImage("/lvl6b.png");
-        ogre          = ImageLoader.loadImage("/lvl6m.png");
-        nagaBoss      = ImageLoader.loadImage("/lvl7b.png");
-        naga          = ImageLoader.loadImage("/lvl7m.png");
-        bearBoss      = ImageLoader.loadImage("/lvl8b.png");
-        shadowWeaver  = ImageLoader.loadImage("/lvl8m.png");
-        illidan       = ImageLoader.loadImage("/lvl9b.png");
-        felguard      = ImageLoader.loadImage("/lvl9m.png");
-        lichKing      = ImageLoader.loadImage("/lvl10b.png");
-        voidWalker    = ImageLoader.loadImage("/lvl10m.png");
+        oneMob          = ImageLoader.loadImage("/lvl1m.png");
+        oneBoss        = ImageLoader.loadImage("/lvl1b.png");
+        twoMob          = ImageLoader.loadImage("/lvl2m.png");
+        twoBoss       = ImageLoader.loadImage("/lvl2b.png");
+        threeBoss = ImageLoader.loadImage("/lvl3b.png");
+        threeMob       = ImageLoader.loadImage("/lvl3m.png");
+        fourBoss         = ImageLoader.loadImage("/lvl4b.png");
+        fourMob      = ImageLoader.loadImage("/lvl4m.png");
+        fiveBoss       = ImageLoader.loadImage("/lvl5b.png");
+        fiveMob         = ImageLoader.loadImage("/lvl5m.png");
+        sixBoss       = ImageLoader.loadImage("/lvl6b.png");
+        sixMob          = ImageLoader.loadImage("/lvl6m.png");
+        sevenBoss      = ImageLoader.loadImage("/lvl7b.png");
+        sevenMob          = ImageLoader.loadImage("/lvl7m.png");
+        eightBoss      = ImageLoader.loadImage("/lvl8b.png");
+        eightMob  = ImageLoader.loadImage("/lvl8m.png");
+        nineBoss       = ImageLoader.loadImage("/lvl9b.png");
+        nineMob      = ImageLoader.loadImage("/lvl9m.png");
+        tenBoss      = ImageLoader.loadImage("/lvl10b.png");
+        tenMob    = ImageLoader.loadImage("/lvl10m.png");
 
         // lvl - level, m - monster, b - boss
     }
