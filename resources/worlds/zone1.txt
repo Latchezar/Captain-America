@@ -1,0 +1,7 @@
+Elwyn Forest
+oneMap
+50 650
+Grey-Forest-Wolf 1 NPCType.MOB levelOneChest levelOneHelmet levelOneBoots 400 650
+Hogger 1 NPCType.BOSS levelOneSword levelOneHammer levelOneBow levelOneStaff 800 650
+
+

@@ -1,0 +1,4 @@
+sixMap
+50 650
+Mo'Gorosh-Ogre 6 NPCType.MOB levelSixChest levelSixHelmet levelSixBoots 400 650
+Hahk'Zor 6 NPCType.BOSS levelSixSword levelSixHammer levelSixBow levelSixStaff 800 650

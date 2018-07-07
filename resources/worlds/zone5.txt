@@ -1,0 +1,4 @@
+fiveMap
+50 650
+Insane-Ghoul 5 NPCType.MOB levelFiveChest levelFiveHelmet levelFiveBoots 400 650
+Stitches 5 NPCType.BOSS levelFiveSword levelFiveHammer levelFiveBow levelFiveStaff 800 650

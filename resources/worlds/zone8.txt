@@ -1,0 +1,4 @@
+eightMap
+50 650
+Nightbane-Shadow-Weaver 8 NPCType.MOB levelEightChest levelEightHelmet levelEightBoots 400 650
+Ursol'lok 8 NPCType.BOSS levelEightSword levelEightHammer levelEightBow levelEightStaff 800 650

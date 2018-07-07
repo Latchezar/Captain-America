@@ -4,7 +4,10 @@ import Creatures.NPC;
 import UiFeatures.Assets;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Zone
 {
@@ -20,10 +23,15 @@ public class Zone
 
     private void generateZone(int level)
     {
-        switch (level)
-        {
-            case 1:
-                setFields("Elwyn Forest", 1, Assets.oneMap, );
+        String path = "/worlds/zone" + level + ".txt";
+        File file = new File(path);
+        try {
+            Scanner inputData = new Scanner(file);
+
+        String name = inputData.nextLine();
+        BufferedImage backgroung = 
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 

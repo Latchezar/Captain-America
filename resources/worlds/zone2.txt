@@ -1,0 +1,4 @@
+twoMap
+50 650
+Great-Goretusk 2 NPCType.MOB levelTwoChest levelTwoHelmet levelTwoBoots 400 650
+Vultros 2 NPCType.BOSS levelTwoSword levelTwoHammer levelTwoBow levelTwoStaff 800 650

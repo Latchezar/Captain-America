@@ -1,0 +1,4 @@
+sevenMap
+50 650
+Stormscale-Siren 7 NPCType.MOB levelSevenChest levelSevenHelmet levelSevenBoots 400 650
+Rajah-Haghazed 7 NPCType.BOSS levelSevenSword levelSevenHammer levelSevenBow levelSevenStaff 800 650

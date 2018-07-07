@@ -1,0 +1,4 @@
+threeMap
+50 650
+Shadowmaw-Panther 3 NPCType.MOB levelThreeChest levelThreeHelmet levelThreeBoots 400 650
+King-Bangalash 3 NPCType.BOSS levelThreeSword levelThreeHammer levelThreeBow levelThreeStaff 800 650

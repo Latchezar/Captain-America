@@ -1,0 +1,5 @@
+
+nineMap
+50 650
+Felguard 9 NPCType.MOB levelNineChest levelNineHelmet levelNineBoots 400 650
+Illidan-Stormrage 9 NPCType.BOSS levelNineSword levelNineHammer levelNineBow levelNineStaff 800 650

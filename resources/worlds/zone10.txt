@@ -1,0 +1,4 @@
+tenMap
+50 650
+Dark-Messenger 10 NPCType.MOB levelTenChest levelTenHelmet levelTenBoots 400 650
+The-Lich-King 10 NPCType.BOSS levelTenSword levelTenHammer levelTenBow levelTenStaff 800 650

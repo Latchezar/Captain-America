@@ -1,0 +1,4 @@
+fourMap
+50 650
+Skeletal-Fiend 4 NPCType.MOB levelFourChest levelFourHelmet levelFourBoots 400 650
+Lurid 4 NPCType.BOSS levelFourSword levelFourHammer levelFourBow levelFourStaff 800 650
