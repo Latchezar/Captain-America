@@ -7,9 +7,9 @@ public class Armour extends Item
     private Stats itemStats;
     private ArmourType type;
 
-    public Armour(String name, int itemLevel, ItemType itemType, int stamina, int power, int deffence, ArmourType type)
+    public Armour(String name, int itemLevel, int stamina, int power, int deffence, ArmourType type)
     {
-        super(name, itemLevel, itemType);
+        super(name, itemLevel, ItemType.ARMOUR);
         setItemStats(stamina, power, deffence);
         setType(type);
     }
