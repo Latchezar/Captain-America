@@ -3,19 +3,25 @@ package Creatures;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public abstract class Creature extends Entity{
+public abstract class Creature {
     public static final int DEFAULT_WIDTH = 200,
                             DEFAULT_HEIGTH = 370;
     private String name;
     private int currentLvl;
     private int currenHealth;
     protected BufferedImage image;
+    protected float x, y;
+    protected int width, heigth;
+
 
     public Creature(String name, int currentLvl, float x, float y, int width, int heigth) {
-        super(x, y, width, heigth);
         setName(name);
         setCurrentLvl(currentLvl);
         setCurrenHealth();
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.heigth = heigth;
     }
 
     public String getName() {
@@ -47,9 +53,9 @@ public abstract class Creature extends Entity{
 
 
     public abstract void update();
-
-    public abstract void render(Graphics g);
-
+    public void render(Graphics g, int x, int y) {
+        g.drawImage(image, x, y, width, heigth, null);
+    }
     public abstract void setImage();
 
 }
