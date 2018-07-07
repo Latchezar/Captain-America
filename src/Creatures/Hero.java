@@ -16,7 +16,7 @@ public abstract class Hero extends Creature {
     private Weapon weapon;
     private Item helmet;
     private Item chest;
-    private Item leggings;
+    private Item boots;
     private ArrayList<Armour> items;
 
     {
@@ -77,12 +77,12 @@ public abstract class Hero extends Creature {
         return helmet;
     }
 
-    protected Item getLeggings() {
-        return leggings;
+    protected Item getBoots() {
+        return boots;
     }
 
-    protected void setLeggings(Item leggings) {
-        this.leggings = leggings;
+    protected void setBoots(Item boots) {
+        this.boots = boots;
     }
 
     protected void setHelmet(Item helmet) {
