@@ -2,6 +2,7 @@ package UiFeatures;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
 public class Game implements Runnable{
 
@@ -24,12 +25,15 @@ public class Game implements Runnable{
 
     private void init(){
         display = new Display(title, width, height);
-
+        Assets.init();
     }
+
+    int x = 0;
 
     private void update(){
 
     }
+
 
     private void render(){
         bs = display.getDisplayCanvas().getBufferStrategy();
@@ -42,8 +46,7 @@ public class Game implements Runnable{
         g.clearRect(0, 0, width, height);
         // draw here
 
-
-
+        g.drawImage(Assets.dwarfHunter, 5, 5, null);
 
         //draw end
         bs.show();
@@ -53,13 +56,25 @@ public class Game implements Runnable{
     public void run(){
         init();
 
+        int fps = 60;
+        double timePerTick = 1000000000 / fps;
+        double delta = 0;
+        long now;
+        long lastTime = System.nanoTime();
+
         while (isRunning){
+            now = System.nanoTime();
+            delta += (now - lastTime) / timePerTick;
+            lastTime = now;
 
-            update();
-            render();
+            if (delta >=  1) {
+                update();
+                render();
+                delta--;
+            }
 
-            stop();
         }
+        stop();
 
     }
 
