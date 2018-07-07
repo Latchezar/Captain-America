@@ -76,11 +76,11 @@ public class Hunter extends Hero implements Attackable {
                         } else if (this.getHelmet().getItemLevel() < dropped.getItemLevel()) {
                             this.setHelmet(dropped);
                         }
-                    } else if (dropped.getItemType() == ItemType.LEGGINGS) {
-                        if (this.getLeggings() == null) {
-                            this.setLeggings(dropped);
-                        } else if (this.getLeggings().getItemLevel() < dropped.getItemLevel()) {
-                            this.setLeggings(dropped);
+                    } else if (dropped.getItemType() == ItemType.BOOTS) {
+                        if (this.getBoots() == null) {
+                            this.setBoots(dropped);
+                        } else if (this.getBoots().getItemLevel() < dropped.getItemLevel()) {
+                            this.setBoots(dropped);
                         }
                     }
                 }

@@ -17,7 +17,6 @@ public class Weapon extends Item
         setType(type);
     }
 
-
     public int getMaxDamage() {
         return maxDamage;
     }
