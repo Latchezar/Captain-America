@@ -23,7 +23,7 @@ public class Zone
         switch (level)
         {
             case 1:
-                setFields("Elwyn Forest", 1, Assets.elwynForest, );
+                setFields("Elwyn Forest", 1, Assets.oneMap, );
         }
     }
 
