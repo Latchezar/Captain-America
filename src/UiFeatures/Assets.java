@@ -9,18 +9,11 @@ public class Assets {
             humanHunter, humanMage, humanPaladin, humanPriest, humanWarrior,
             orcHunter, orcMage, orcPaladin, orcPriest, orcWarrior,
             trollHunter, trollMage, trollPaladin, trollPriest, trollWarrior,
-<<<<<<< HEAD
-            undeadHunter, undeadMage, undeadPaladin, undeadPriest, undeadWarrior, wolf,
-            hogger, boar, vultros, kingBangalash, panther, lurid, skeleton,
-            stiches, ghoul, hahkZor, ogre, nagaBoss, naga, bearBoss, shadowWeaver, illidan,
-            felguard, lichKing, voidWalker, elwynForest, westfall, strv, graveyard,
-            duskwood, hellfire, zangarmash, ashenvale, blackTemple, icecrown;
-=======
             undeadHunter, undeadMage, undeadPaladin, undeadPriest, undeadWarrior,
             oneMob, oneBoss, twoMob, twoBoss, threeMob, threeBoss, fourBoss, fourMob,
             fiveMob, fiveBoss, sixBoss, sixMob, sevenBoss, sevenMob, eightBoss, eightMob,
-            nineBoss, nineMob, tenBoss, tenMob;
->>>>>>> 5c72e798e4ea05ba4c3fa766541b6052fba862ea
+            nineBoss, nineMob, tenBoss, tenMob, oneMap, twoMap, threeMap, fourMap,
+            fiveMap, sixMap, sevenMap, eightMap, nineMap, tenMap;
 
     public static void init(){
         //dwarf images
@@ -92,15 +85,15 @@ public class Assets {
 
         // zones
 
-        elwynForest = ImageLoader.loadImage("resources/lvl1z");
-        westfall    = ImageLoader.loadImage("resources/lvl2z");
-        strv        = ImageLoader.loadImage("resources/lvl3z");
-        graveyard   = ImageLoader.loadImage("resources/lvl4z");
-        duskwood    = ImageLoader.loadImage("resources/lvl5z");
-        hellfire    = ImageLoader.loadImage("resources/lvl6z");
-        zangarmash  = ImageLoader.loadImage("resources/lvl7z");
-        ashenvale   = ImageLoader.loadImage("resources/lvl8z");
-        blackTemple = ImageLoader.loadImage("resources/lvl9z");
-        icecrown    = ImageLoader.loadImage("resources/lvl10z");
+        oneMap = ImageLoader.loadImage("resources/lvl1z");
+        twoMap    = ImageLoader.loadImage("resources/lvl2z");
+        threeMap        = ImageLoader.loadImage("resources/lvl3z");
+        fourMap   = ImageLoader.loadImage("resources/lvl4z");
+        fiveMap    = ImageLoader.loadImage("resources/lvl5z");
+        sixMap    = ImageLoader.loadImage("resources/lvl6z");
+        sevenMap  = ImageLoader.loadImage("resources/lvl7z");
+        eightMap   = ImageLoader.loadImage("resources/lvl8z");
+        nineMap = ImageLoader.loadImage("resources/lvl9z");
+        tenMap    = ImageLoader.loadImage("resources/lvl10z");
     }
 }
