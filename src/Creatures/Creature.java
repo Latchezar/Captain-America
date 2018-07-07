@@ -1,11 +1,16 @@
 package Creatures;
 
-public class Creature {
+import java.awt.*;
+
+public abstract class Creature extends Entity{
+    public static final int DEFAULT_WIDTH = 200,
+                            DEFAULT_HEIGTH = 370;
     private String name;
     private int currentLvl;
     private int currenHealth;
 
-    public Creature(String name, int currentLvl) {
+    public Creature(String name, int currentLvl, float x, float y, int width, int heigth) {
+        super(x, y, width, heigth);
         setName(name);
         setCurrentLvl(currentLvl);
         setCurrenHealth();
@@ -37,5 +42,10 @@ public class Creature {
     void setCurrenHealth(int currenHealth) {
         this.currenHealth = currenHealth;
     }
+
+
+    public abstract void update();
+
+    public abstract void render(Graphics g);
 
 }

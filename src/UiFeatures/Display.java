@@ -29,6 +29,7 @@ public class Display {
         displayCanvas.setPreferredSize(new Dimension(width, height));
         displayCanvas.setMaximumSize(new Dimension(width, height));
         displayCanvas.setMinimumSize(new Dimension(width, height));
+        displayCanvas.setFocusable(false);
 
         displayFrame.add(displayCanvas);
         displayFrame.pack();
@@ -36,5 +37,8 @@ public class Display {
 
     public Canvas getDisplayCanvas(){
         return displayCanvas;
+    }
+    public JFrame getDisplayFrame(){
+        return displayFrame;
     }
 }

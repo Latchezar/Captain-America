@@ -6,7 +6,10 @@ import Items.Weapon;
 import Items.WeaponType;
 import Powers.HeroPower;
 import Powers.PowerType;
+import UiFeatures.Assets;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public class Warrior extends Hero implements Attackable {
@@ -14,8 +17,8 @@ public class Warrior extends Hero implements Attackable {
     private int maxHealth;
 
 
-    Warrior(String name, Race race){
-        super(name, race);
+    Warrior(String name, Race race, float x, float y){
+        super(name, race, x , y);
         setHeroStats(race, 2, 2, 1); //those are magical numbers :D
         setMaxHealth(this.heroStats.getStamina()*10+1*10);
         this.setCurrenHealth(maxHealth);
@@ -154,5 +157,37 @@ public class Warrior extends Hero implements Attackable {
             addHeroPower(bladestorm);
             return;
         }
+    }
+
+    // UI
+
+    @Override
+    public void update(){
+
+    }
+
+    @Override
+    public void render(Graphics g){
+        BufferedImage heroImage = Assets.dwarfWarrior;
+        switch (this.getRace()){
+            case DWARF:
+                heroImage = Assets.dwarfWarrior;
+                break;
+            case HUMAN:
+                heroImage = Assets.humanWarrior;
+                break;
+            case ELF:
+                heroImage = Assets.elfWarrior;
+                break;
+            case ORC:
+                heroImage = Assets.orcWarrior;
+                break;
+            case TROLL:
+                heroImage = Assets.trollWarrior;
+                break;
+            case UNDEAD:
+                heroImage = Assets.undeadWarrior;
+        }
+        g.drawImage(heroImage, (int) x, (int) y, width, heigth, null);
     }
 }
