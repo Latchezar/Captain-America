@@ -1,5 +1,0 @@
-The Black Temple
-nineMap
-50 650
-Felguard 400 650
-Illidan-Stormrage 800 650

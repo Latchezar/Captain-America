@@ -1,5 +1,0 @@
-Westfall
-twoMap
-50 650
-Great-Goretusk 400 650
-Vultros 800 650

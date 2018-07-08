@@ -1,5 +1,0 @@
-Duskwood
-fourMap
-50 650
-Skeletal-Fiend 400 650
-Lurid 800 650

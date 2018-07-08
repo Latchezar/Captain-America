@@ -73,8 +73,11 @@ public class Game implements Runnable{
 //        if (State.getStat() != null) {
 //            State.getStat().render(g);
 //        }
-        currentZone.render(g);
-
+        //currentZone.render(g);
+        g.drawImage(Assets.oneMap, 0, 0, 1200, 800, null);
+        g.drawImage(Assets.dwarfHunter, 50, 300, null);
+        g.drawImage(Assets.oneMob, 600, 300, null);
+        g.drawImage(Assets.oneBoss, 800, 300, null);
         //draw end
         bs.show();
         g.dispose();

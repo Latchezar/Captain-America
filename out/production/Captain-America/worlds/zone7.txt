@@ -1,5 +1,0 @@
-Zangarmarsh
-sevenMap
-50 650
-Stormscale-Siren 400 650
-Rajah-Haghazed 800 650

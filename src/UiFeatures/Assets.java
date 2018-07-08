@@ -85,15 +85,15 @@ public class Assets {
 
         // zones
 
-        oneMap = ImageLoader.loadImage("/lvl1z");
-        twoMap    = ImageLoader.loadImage("/lvl2z");
-        threeMap        = ImageLoader.loadImage("/lvl3z");
-        fourMap   = ImageLoader.loadImage("/lvl4z");
-        fiveMap    = ImageLoader.loadImage("/lvl5z");
-        sixMap    = ImageLoader.loadImage("/lvl6z");
-        sevenMap  = ImageLoader.loadImage("/lvl7z");
-        eightMap   = ImageLoader.loadImage("/lvl8z");
-        nineMap = ImageLoader.loadImage("/lvl9z");
-        tenMap    = ImageLoader.loadImage("/lvl10z");
+        oneMap = ImageLoader.loadImage("/lvl1z.jpg");
+        twoMap    = ImageLoader.loadImage("/lvl2z.jpg");
+        threeMap        = ImageLoader.loadImage("/lvl3z.jpg");
+        fourMap   = ImageLoader.loadImage("/lvl4z.jpg");
+        fiveMap    = ImageLoader.loadImage("/lvl5z.jpg");
+        sixMap    = ImageLoader.loadImage("/lvl6z.jpg");
+        sevenMap  = ImageLoader.loadImage("/lvl7z.jpg");
+        eightMap   = ImageLoader.loadImage("/lvl8z.jpg");
+        nineMap = ImageLoader.loadImage("/lvl9z.jpg");
+        tenMap    = ImageLoader.loadImage("/lvl10z.jpg");
     }
 }

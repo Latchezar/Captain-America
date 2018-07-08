@@ -1,7 +1,0 @@
-Elwyn Forest
-oneMap
-50 650
-Grey-Forest-Wolf 400 650
-Hogger 800 650
-
-

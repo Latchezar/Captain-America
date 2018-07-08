@@ -1,5 +1,0 @@
-Twilight Highlands
-eightMap
-50 650
-Nightbane-Shadow-Weaver 400 650
-Ursol'lok 800 650

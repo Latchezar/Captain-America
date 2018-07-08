@@ -1,5 +1,0 @@
-The Frozen Throne
-tenMap
-50 650
-Dark-Messenger 400 650
-The-Lich-King 800 650
