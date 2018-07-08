@@ -50,6 +50,25 @@ public abstract class Creature {
     void setCurrenHealth(int currenHealth) {
         this.currenHealth = currenHealth;
     }
+    public BufferedImage getImage(){
+        return image;
+    }
+    public void setCoordinates(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+    public int getX(){
+        return (int)x;
+    }
+    public int getY(){
+        return (int)y;
+    }
+    public int getDefaultWidth(){
+        return DEFAULT_WIDTH;
+    }
+    public int getDefaultHeigth(){
+        return DEFAULT_HEIGTH;
+    }
 
 
     public abstract void update();

@@ -1,12 +1,15 @@
 package UiFeatures;
 
+import Creatures.*;
 import UiFeatures.states.GameState;
 import UiFeatures.states.MenuState;
 import UiFeatures.states.State;
+import World.Zone;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Game implements Runnable{
 
@@ -19,6 +22,8 @@ public class Game implements Runnable{
 
     private BufferStrategy bs;
     private Graphics g;
+    private Zone currentZone;
+    private Hero char1 = new Mage("Test Char", Race.UNDEAD, 0, 0);
 
     //states
     private State gameState;
@@ -27,11 +32,12 @@ public class Game implements Runnable{
     //Input
     private KeyManager keyManager;
 
-    public Game(String title, int width, int height){
+    public Game(String title, int width, int height) throws IOException {
         this.width = width;
         this.height = height;
         this.title = title;
         keyManager = new KeyManager();
+        currentZone = new Zone(1, char1);
     }
 
     private void init(){
@@ -64,9 +70,10 @@ public class Game implements Runnable{
         //clear the screen
         g.clearRect(0, 0, width, height);
         // draw here
-        if (State.getStat() != null) {
-            State.getStat().render(g);
-        }
+//        if (State.getStat() != null) {
+//            State.getStat().render(g);
+//        }
+        currentZone.render(g);
 
         //draw end
         bs.show();

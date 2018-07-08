@@ -11,10 +11,10 @@ public class NPC extends Creature
     private ArrayList<Item> loot;
     private NPCType type;
 
-    public NPC(String name, int currentLevel, NPCType type, ArrayList<Item> loot, float x, float y)
+    public NPC(String name, int currentLevel, NPCType type, float x, float y)
     {
         super(name, currentLevel, x, y, DEFAULT_WIDTH, DEFAULT_HEIGTH);
-        setLoot(loot);
+        //setLoot(loot);
         setType(type);
 
     }

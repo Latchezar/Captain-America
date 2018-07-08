@@ -1,9 +1,6 @@
 package Creatures;
 
-import Items.Item;
-import Items.ItemType;
-import Items.Weapon;
-import Items.WeaponType;
+import Items.*;
 import Powers.HeroPower;
 import Powers.PowerType;
 import UiFeatures.Assets;
@@ -17,9 +14,9 @@ public class Warrior extends Hero implements Attackable {
     private int maxHealth;
 
 
-    Warrior(String name, Race race, float x, float y){
+    public Warrior(String name, Race race, float x, float y){
         super(name, race, x , y);
-        setHeroStats(race, 2, 2, 1); //those are magical numbers :D
+        heroStats = new Stats(race, 2, 2, 1); //those are magical numbers :D
         setMaxHealth(this.heroStats.getStamina()*10+1*10);
         this.setCurrenHealth(maxHealth);
     }
@@ -62,8 +59,9 @@ public class Warrior extends Hero implements Attackable {
                             }
                         }
                     }
-                } else {
-                    if (dropped.getItemType() == ItemType.CHEST) {
+                } else if (dropped.getItemType() == ItemType.ARMOUR){
+                    Armour armor = (Armour) dropped;
+                    if (armor.getType() == ArmourType.CHEST) {
                         if (this.getChest() == null) {
                             this.setChest(dropped);
                         } else {
@@ -71,17 +69,17 @@ public class Warrior extends Hero implements Attackable {
                                 this.setChest(dropped);
                             }
                         }
-                    } else if (dropped.getItemType() == ItemType.HELMET) {
+                    } else if (armor.getType() == ArmourType.HELMET) {
                         if (this.getHelmet() == null) {
                             this.setHelmet(dropped);
                         } else if (this.getHelmet().getItemLevel() < dropped.getItemLevel()) {
                             this.setHelmet(dropped);
                         }
-                    } else if (dropped.getItemType() == ItemType.LEGGINGS) {
-                        if (this.getLeggings() == null) {
-                            this.setLeggings(dropped);
-                        } else if (this.getLeggings().getItemLevel() < dropped.getItemLevel()) {
-                            this.setLeggings(dropped);
+                    } else if (armor.getType() == ArmourType.BOOTS) {
+                        if (this.getBoots() == null) {
+                            this.setBoots(dropped);
+                        } else if (this.getBoots().getItemLevel() < dropped.getItemLevel()) {
+                            this.setBoots(dropped);
                         }
                     }
                 }
@@ -94,38 +92,6 @@ public class Warrior extends Hero implements Attackable {
         int health = 1*10 + (this.getHeroStats().getStamina() * 10);
 
         return 1;
-    }
-    private Stats setHeroStats(Race race, int stamina, int power, int deffence) {
-        switch (race) {
-            case HUMAN:
-                stamina += 1;
-                power += 2;
-                deffence += 1;
-                break;
-            case ORC:
-                stamina += 2;
-                power += 1;
-                deffence += 1;
-                break;
-            case UNDEAD:
-                stamina += 2;
-                power += 2;
-                break;
-            case ELF:
-                stamina += 2;
-                power += 2;
-                break;
-            case TROLL:
-                power += 3;
-                deffence += 1;
-                break;
-            case DWARF:
-                stamina+=2;
-                power+=1;
-                deffence+=1;
-                break;
-        }
-        return new Stats(stamina, power, deffence);
     }
 
     public Stats getHeroStats() {
