@@ -6,6 +6,7 @@ import Powers.Power;
 import Powers.PowerType;
 import UiFeatures.Assets;
 import UiFeatures.ImageLoader;
+import UiFeatures.NameTooLong;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -16,7 +17,7 @@ public class Hunter extends Hero implements Attackable {
     private int maxHealth;
 
 
-    public Hunter(String name, Race race, float x, float y){
+    public Hunter(String name, Race race, float x, float y) throws NameTooLong {
         super(name, race, x , y);
         heroStats = new Stats(race, 1, 3, 1); //those are magical numbers :D
         setMaxHealth();

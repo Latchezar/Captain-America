@@ -4,6 +4,7 @@ import Items.*;
 import Powers.HeroPower;
 import Powers.PowerType;
 import UiFeatures.Assets;
+import UiFeatures.NameTooLong;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -15,7 +16,7 @@ public class Warrior extends Hero implements Attackable {
     private int maxHealth;
 
 
-    public Warrior(String name, Race race, float x, float y){
+    public Warrior(String name, Race race, float x, float y) throws NameTooLong {
         super(name, race, x , y);
         heroStats = new Stats(race, 2, 2, 1); //those are magical numbers :D
         setMaxHealth(this.heroStats.getStamina()*10+1*10);

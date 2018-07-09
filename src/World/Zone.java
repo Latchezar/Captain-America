@@ -5,6 +5,7 @@ import Creatures.NPC;
 import Creatures.NPCType;
 import Items.Item;
 import UiFeatures.Assets;
+import UiFeatures.NameTooLong;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -21,12 +22,12 @@ public class Zone
     private NPC boss;
     private Hero character;
 
-    public Zone(int level, Hero character) throws IOException {
+    public Zone(int level, Hero character) throws IOException, NameTooLong{
         this.character = character;
         generateZone(level);
     }
 
-    private void generateZone(int level) throws IOException {
+    private void generateZone(int level) throws IOException, NameTooLong {
         String path = "resources/zone" + level + ".txt";
         File file = new File(path);
         try {

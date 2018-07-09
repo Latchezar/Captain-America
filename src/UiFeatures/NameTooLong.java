@@ -1,7 +1,7 @@
 package UiFeatures;
 
-public class FileNotExist extends Exception{
-    public FileNotExist(){
+public class NameTooLong extends Exception{
+    public NameTooLong(){
         super("The File does not exist in that path!");
     }
 }

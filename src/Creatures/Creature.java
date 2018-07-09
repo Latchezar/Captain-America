@@ -1,5 +1,7 @@
 package Creatures;
 
+import UiFeatures.NameTooLong;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -14,14 +16,18 @@ public abstract class Creature {
     protected int width, height;
 
 
-    public Creature(String name, int currentLvl, float x, float y, int width, int height) {
-        setName(name);
-        setCurrentLvl(currentLvl);
-        setCurrentHealth();
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
+    public Creature(String name, int currentLvl, float x, float y, int width, int height) throws NameTooLong{
+        if (name.length() > 35 || name.length() < 3){
+            throw new NameTooLong();
+        } else {
+            setName(name);
+            setCurrentLvl(currentLvl);
+            setCurrentHealth();
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        }
     }
 
     public String getName() {

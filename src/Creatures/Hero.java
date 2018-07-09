@@ -4,6 +4,7 @@ import Items.Armour;
 import Items.Item;
 import Items.Weapon;
 import Powers.Power;
+import UiFeatures.NameTooLong;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public abstract class Hero extends Creature {
         currentPowers = new ArrayList<>();
     }
 
-    public Hero(String name, Race race, float x, float y) {
+    public Hero(String name, Race race, float x, float y) throws NameTooLong {
         super(name, 1, x, y, Creature.DEFAULT_WIDTH, Creature.DEFAULT_HEIGHT);
         setRace(race);
     }

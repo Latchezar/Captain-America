@@ -2,6 +2,7 @@ package Creatures;
 
 import Items.Item;
 import UiFeatures.Assets;
+import UiFeatures.NameTooLong;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class NPC extends Creature
     private ArrayList<Item> loot;
     private NPCType type;
 
-    public NPC(String name, int currentLevel, NPCType type, float x, float y)
+    public NPC(String name, int currentLevel, NPCType type, float x, float y) throws NameTooLong
     {
         super(name, currentLevel, x, y, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         //setLoot(loot);

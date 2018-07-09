@@ -4,6 +4,7 @@ import Items.*;
 import Powers.HeroPower;
 import Powers.PowerType;
 import UiFeatures.Assets;
+import UiFeatures.NameTooLong;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -15,7 +16,7 @@ public class Mage extends Hero implements Attackable {
     private int maxHealth;
 
 
-    public Mage(String name, Race race, float x, float y){
+    public Mage(String name, Race race, float x, float y) throws NameTooLong {
         super(name, race, x , y);
         heroStats = new Stats(race, 1, 4, 0);
         setMaxHealth(heroStats.getStamina()*10+getCurrentLvl()*10);
