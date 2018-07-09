@@ -34,7 +34,7 @@ public class Zone
             //Scanner inputData = new Scanner(file);
 
             String name = inputData.readLine();
-            BufferedImage backgroung = setBackground(level);
+            this.background = setBackground(level);
             String row = inputData.readLine();
             String[] coordinates = row.split(" ");
             this.character.setCoordinates(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]));
