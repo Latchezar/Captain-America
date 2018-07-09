@@ -72,9 +72,9 @@ public class Game implements Runnable{
         g.clearRect(0, 0, width, height);
         // draw here
         g.drawImage(Assets.tenMap, 0, 0, 1200, 800, null);
-        g.drawImage(Assets.nineBoss, 50, 300, null);
+        g.drawImage(Assets.humanWarrior, 50, 300, null);
         g.drawImage(Assets.tenMob, 600, 300, null);
-        g.drawImage(Assets.tenBoss, 800, 300, null);
+        g.drawImage(Assets.tenBoss, 900, 150, 300, 555, null);
         //draw end
         bs.show();
         g.dispose();
