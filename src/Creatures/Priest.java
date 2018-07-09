@@ -45,6 +45,8 @@ public class Priest extends Hero implements Attackable {
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
                 this.setCurrentLvl(this.getCurrentLvl() + 1);
 
+                maxHealth = newHealth();
+                this.addPower();
             }
 
             // item switch start
@@ -92,10 +94,10 @@ public class Priest extends Hero implements Attackable {
         }
     }
 
-    private int deffHealth(){
-        int health = 1*10 + (this.getHeroStats().getStamina() * 10);
+    private int newHealth() {
+        int health = getMaxHealth() * 10 + (this.getHeroStats().getStamina() * 10);
 
-        return 1;
+        return health;
     }
 
     public Stats getHeroStats() {
