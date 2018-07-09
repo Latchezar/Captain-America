@@ -20,7 +20,7 @@ public class Hunter extends Hero implements Attackable {
         super(name, race, x , y);
         heroStats = new Stats(race, 1, 3, 1); //those are magical numbers :D
         setMaxHealth();
-        this.setCurrenHealth(maxHealth);
+        this.setCurrentHealth(maxHealth);
     }
 
     public int getMaxHealth() {

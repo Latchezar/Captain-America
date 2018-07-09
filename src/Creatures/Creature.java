@@ -5,23 +5,23 @@ import java.awt.image.BufferedImage;
 
 public abstract class Creature {
     public static final int DEFAULT_WIDTH = 200,
-                            DEFAULT_HEIGTH = 370;
+                            DEFAULT_HEIGHT = 370;
     private String name;
     private int currentLvl;
-    private int currenHealth;
+    private int currentHealth;
     protected BufferedImage image;
     protected float x, y;
-    protected int width, heigth;
+    protected int width, height;
 
 
-    public Creature(String name, int currentLvl, float x, float y, int width, int heigth) {
+    public Creature(String name, int currentLvl, float x, float y, int width, int height) {
         setName(name);
         setCurrentLvl(currentLvl);
-        setCurrenHealth();
+        setCurrentHealth();
         this.x = x;
         this.y = y;
         this.width = width;
-        this.heigth = heigth;
+        this.height = height;
     }
 
     public String getName() {
@@ -40,15 +40,15 @@ public abstract class Creature {
         this.currentLvl = currentLvl;
     }
 
-    public int getCurrenHealth() {
-        return currenHealth;
+    public int getCurrentHealth() {
+        return currentHealth;
     }
 
-    private void setCurrenHealth() {
-        currenHealth = currentLvl * 10;
+    private void setCurrentHealth() {
+        currentHealth = currentLvl * 10;
     }
-    void setCurrenHealth(int currenHealth) {
-        this.currenHealth = currenHealth;
+    void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
     }
     public BufferedImage getImage(){
         return image;
@@ -66,14 +66,14 @@ public abstract class Creature {
     public int getDefaultWidth(){
         return DEFAULT_WIDTH;
     }
-    public int getDefaultHeigth(){
-        return DEFAULT_HEIGTH;
+    public int getDefaultHeight(){
+        return DEFAULT_HEIGHT;
     }
 
 
     public abstract void update();
     public void render(Graphics g, int x, int y) {
-        g.drawImage(image, x, y, width, heigth, null);
+        g.drawImage(image, x, y, width, height, null);
     }
     public abstract void setImage();
 
