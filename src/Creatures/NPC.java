@@ -13,7 +13,7 @@ public class NPC extends Creature
 
     public NPC(String name, int currentLevel, NPCType type, float x, float y)
     {
-        super(name, currentLevel, x, y, DEFAULT_WIDTH, DEFAULT_HEIGTH);
+        super(name, currentLevel, x, y, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         //setLoot(loot);
         setType(type);
 
@@ -31,7 +31,7 @@ public class NPC extends Creature
 
     public int receiveAttack(int damage)
     {
-        int life = getCurrenHealth() - damage;
+        int life = getCurrentHealth() - damage;
 
         if (life <= 0)
         {
@@ -63,7 +63,7 @@ public class NPC extends Creature
 
     @Override
     public void render(Graphics g, int x , int y){
-        g.drawImage(image, x, y, width, heigth, null);
+        g.drawImage(image, x, y, width, height, null);
     }
 
     @Override

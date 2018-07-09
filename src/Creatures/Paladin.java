@@ -19,7 +19,7 @@ public class Paladin extends Hero implements Attackable {
         super(name, race, x , y);
         heroStats = new Stats(race, 2, 2, 2); //those are magical numbers :D
         setMaxHealth(this.heroStats.getStamina() * 10 + 1 * 10);
-        this.setCurrenHealth(maxHealth);
+        this.setCurrentHealth(maxHealth);
     }
 
     public int getMaxHealth() {
@@ -44,6 +44,15 @@ public class Paladin extends Hero implements Attackable {
             //ma toi umrql ma
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
                 this.setCurrentLvl(this.getCurrentLvl() + 1);
+<<<<<<< HEAD
+<<<<<<< HEAD
+                maxHealth = newHealth();
+=======
+                this.addPower();
+>>>>>>> 1dfe63fac679dff9916889115781cee3154d2850
+=======
+                this.addPower();
+>>>>>>> 1dfe63fac679dff9916889115781cee3154d2850
             }
 
             // item switch start
@@ -91,10 +100,10 @@ public class Paladin extends Hero implements Attackable {
         }
     }
 
-    private int deffHealth() {
-        int health = 1 * 10 + (this.getHeroStats().getStamina() * 10);
+    private int newHealth() {
+        int health = getMaxHealth() * 10 + (this.getHeroStats().getStamina() * 10);
 
-        return 1;
+        return health;
     }
 
     public Stats getHeroStats() {

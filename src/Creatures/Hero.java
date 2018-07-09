@@ -23,7 +23,7 @@ public abstract class Hero extends Creature {
     }
 
     public Hero(String name, Race race, float x, float y) {
-        super(name, 1, x, y, Creature.DEFAULT_WIDTH, Creature.DEFAULT_HEIGTH);
+        super(name, 1, x, y, Creature.DEFAULT_WIDTH, Creature.DEFAULT_HEIGHT);
         setRace(race);
     }
 

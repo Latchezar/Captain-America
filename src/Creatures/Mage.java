@@ -19,7 +19,7 @@ public class Mage extends Hero implements Attackable {
         super(name, race, x , y);
         heroStats = new Stats(race, 1, 4, 0);
         setMaxHealth(heroStats.getStamina()*10+getCurrentLvl()*10);
-        this.setCurrenHealth(maxHealth);
+        this.setCurrentHealth(maxHealth);
     }
     public int getMaxHealth() {
         return maxHealth;
