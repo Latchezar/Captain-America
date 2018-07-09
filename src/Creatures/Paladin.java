@@ -44,15 +44,9 @@ public class Paladin extends Hero implements Attackable {
             //ma toi umrql ma
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
                 this.setCurrentLvl(this.getCurrentLvl() + 1);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 maxHealth = newHealth();
-=======
                 this.addPower();
->>>>>>> 1dfe63fac679dff9916889115781cee3154d2850
-=======
-                this.addPower();
->>>>>>> 1dfe63fac679dff9916889115781cee3154d2850
             }
 
             // item switch start
