@@ -46,7 +46,6 @@ public class Hunter extends Hero implements Attackable {
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
                 this.setCurrentLvl(this.getCurrentLvl() + 1);
                 maxHealth = newHealth();
-                this.addPower();
             }
 
             // item switch start

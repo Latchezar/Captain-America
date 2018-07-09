@@ -42,7 +42,6 @@ public class Warrior extends Hero implements Attackable {
             //ma toi umrql ma
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
                 this.setCurrentLvl(this.getCurrentLvl() + 1);
-                this.addPower();
             }
 
             // item switch start
