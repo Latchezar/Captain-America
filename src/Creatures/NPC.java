@@ -62,6 +62,11 @@ public class NPC extends Creature
     }
 
     @Override
+    public void render(Graphics g, int x , int y){
+        g.drawImage(image, x, y, width, heigth, null);
+    }
+
+    @Override
     public void setImage(){
         switch (getCurrentLvl()){
             case 1:
