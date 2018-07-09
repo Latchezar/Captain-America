@@ -20,7 +20,7 @@ public class Priest extends Hero implements Attackable {
         super(name, race, x , y);
         heroStats = new Stats(race, 1, 4, 1); //those are magical numbers :D
         setMaxHealth(this.heroStats.getStamina()*10+1*10);
-        this.setCurrenHealth(maxHealth);
+        this.setCurrentHealth(maxHealth);
     }
 
     public int getMaxHealth() {
@@ -44,6 +44,7 @@ public class Priest extends Hero implements Attackable {
             //ma toi umrql ma
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
                 this.setCurrentLvl(this.getCurrentLvl() + 1);
+
             }
 
             // item switch start

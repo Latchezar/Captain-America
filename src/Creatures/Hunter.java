@@ -20,7 +20,7 @@ public class Hunter extends Hero implements Attackable {
         super(name, race, x , y);
         heroStats = new Stats(race, 1, 3, 1); //those are magical numbers :D
         setMaxHealth();
-        this.setCurrenHealth(maxHealth);
+        this.setCurrentHealth(maxHealth);
     }
 
     public int getMaxHealth() {
@@ -45,6 +45,7 @@ public class Hunter extends Hero implements Attackable {
             //ma toi umrql ma
             if (this.getCurrentLvl() - 1 <= currentXP / 10) {
                 this.setCurrentLvl(this.getCurrentLvl() + 1);
+                maxHealth = newHealth();
             }
 
             // item switch start
@@ -92,10 +93,10 @@ public class Hunter extends Hero implements Attackable {
         }
     }
 
-    private int deffHealth(){
-        int health = 1*10 + (this.getHeroStats().getStamina() * 10);
+    private int newHealth(){
+        int health = this.getCurrentLvl()*10 + (this.getHeroStats().getStamina() * 10);
 
-        return 1;
+        return health;
     }
 
     public Stats getHeroStats() {
