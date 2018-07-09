@@ -82,14 +82,6 @@ public class Zone
         return null;
     }
 
-    private void setFields(String name, int level, BufferedImage background)
-    {
-        this.name = name;
-        this.level = level;
-        this.background = background;
-    }
-
-
     public void render(Graphics g){
         g.drawImage(this.background, 0, 0, 1200, 800, null);
         monster.render(g, monster.getX(), monster.getY());

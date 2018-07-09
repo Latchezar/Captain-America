@@ -63,23 +63,23 @@ public class Warrior extends Hero implements Attackable {
                     Armour armor = (Armour) dropped;
                     if (armor.getType() == ArmourType.CHEST) {
                         if (this.getChest() == null) {
-                            this.setChest(dropped);
+                            this.setChest(armor);
                         } else {
                             if (this.getChest().getItemLevel() < dropped.getItemLevel()) {
-                                this.setChest(dropped);
+                                this.setChest(armor);
                             }
                         }
                     } else if (armor.getType() == ArmourType.HELMET) {
                         if (this.getHelmet() == null) {
-                            this.setHelmet(dropped);
+                            this.setHelmet(armor);
                         } else if (this.getHelmet().getItemLevel() < dropped.getItemLevel()) {
-                            this.setHelmet(dropped);
+                            this.setHelmet(armor);
                         }
                     } else if (armor.getType() == ArmourType.BOOTS) {
                         if (this.getBoots() == null) {
-                            this.setBoots(dropped);
+                            this.setBoots(armor);
                         } else if (this.getBoots().getItemLevel() < dropped.getItemLevel()) {
-                            this.setBoots(dropped);
+                            this.setBoots(armor);
                         }
                     }
                 }

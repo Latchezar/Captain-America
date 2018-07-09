@@ -44,14 +44,10 @@ public class NPC extends Creature
 
     private int getDamage(){
         switch (type){
-            case UNDEAD:
+            case MOB:
                 return 2;
-            case DEMON:
+            case BOSS:
                 return 4;
-            case ANIMAL:
-                return 2;
-            case HUMANOID:
-                return 3;
         }
         return -1;
     }

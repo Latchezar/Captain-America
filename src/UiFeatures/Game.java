@@ -23,7 +23,7 @@ public class Game implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
     private Zone currentZone;
-    private Hero char1 = new Mage("Test Char", Race.UNDEAD, 0, 0);
+    private Hero char1 = new Mage("Test Char", Race.UNDEAD, 0, 0); //test
 
     //states
     private State gameState;
@@ -37,7 +37,7 @@ public class Game implements Runnable{
         this.height = height;
         this.title = title;
         keyManager = new KeyManager();
-        currentZone = new Zone(1, char1);
+        currentZone = new Zone(1, char1); // for test
     }
 
     private void init(){
@@ -73,11 +73,11 @@ public class Game implements Runnable{
 //        if (State.getStat() != null) {
 //            State.getStat().render(g);
 //        }
-        //currentZone.render(g);
-        g.drawImage(Assets.oneMap, 0, 0, 1200, 800, null);
-        g.drawImage(Assets.dwarfHunter, 50, 300, null);
-        g.drawImage(Assets.oneMob, 600, 300, null);
-        g.drawImage(Assets.oneBoss, 800, 300, null);
+        currentZone.render(g);
+//        g.drawImage(Assets.tenMap, 0, 0, 1200, 800, null);
+//        g.drawImage(Assets.nineBoss, 50, 300, null);
+//        g.drawImage(Assets.tenMob, 600, 300, null);
+//        g.drawImage(Assets.tenBoss, 800, 300, null);
         //draw end
         bs.show();
         g.dispose();

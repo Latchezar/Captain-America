@@ -14,10 +14,9 @@ public abstract class Hero extends Creature {
     protected int currentXP = 1;
     private ArrayList<Power> currentPowers;
     private Weapon weapon;
-    private Item helmet;
-    private Item chest;
-    private Item boots;
-    private ArrayList<Armour> items;
+    private Armour helmet;
+    private Armour chest;
+    private Armour boots;
 
     {
         currentPowers = new ArrayList<>();
@@ -57,10 +56,6 @@ public abstract class Hero extends Creature {
         return weapon;
     }
 
-    protected ArrayList<Armour> getItems() {
-        return items;
-    }
-
     protected void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
@@ -69,7 +64,7 @@ public abstract class Hero extends Creature {
         return chest;
     }
 
-    protected void setChest(Item chest) {
+    protected void setChest(Armour chest) {
         this.chest = chest;
     }
 
@@ -81,11 +76,11 @@ public abstract class Hero extends Creature {
         return boots;
     }
 
-    protected void setBoots(Item boots) {
+    protected void setBoots(Armour boots) {
         this.boots = boots;
     }
 
-    protected void setHelmet(Item helmet) {
+    protected void setHelmet(Armour helmet) {
         this.helmet = helmet;
     }
 
